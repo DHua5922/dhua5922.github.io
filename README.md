@@ -2,6 +2,13 @@
 
 My portfolio website.
 
+## Dependencies / Technologies Used
+* [React](https://reactjs.org/)
+* [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
+* [React Router DOM](https://www.npmjs.com/package/react-router-dom)
+* [React Router Transition Switch](https://www.npmjs.com/package/react-router-transition-switch)
+* [Sass](https://sass-lang.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
