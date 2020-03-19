@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './components/home/Home';
+import {About} from './components/about/About';
+import {Contact} from './components/contact/Contact';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -10,10 +12,11 @@ const routing = (
     <Router>
         <Switch>
             <div>
-                <Route path="/about" component={Home} />
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
                 <Route path="/portfolio" component={Home}/>
-                <Route path="/contact" component={Home}/>
-                <Route path="/" component={Home} />
+                <Route path="/contact" component={Contact}/>
+                
             </div>
         </Switch>
     </Router>
