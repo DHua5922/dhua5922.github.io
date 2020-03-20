@@ -1,0 +1,35 @@
+@import "../../index.scss";
+
+.portfolio-row, .page {
+    background-color: $default-bg-color;
+
+    .header {
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+
+    .header, .img-label {
+        color: white;
+    }
+    
+    .header, .img-label, h6 {
+        text-align: center;
+    }
+
+    .project-display {  
+        position: relative; 
+
+        img {
+            width: 100%;
+        }
+
+        h6 {
+            color: black;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 0 !important;
+            width: 100%;
+        }
+    }
+}

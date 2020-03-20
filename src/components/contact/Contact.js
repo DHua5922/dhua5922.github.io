@@ -9,6 +9,7 @@ export class Contact extends Component {
             <Form name="myForm" method="POST">
                 <h1 className="text-center"><b>Contact Me</b></h1>
                 <p><span className="required">*</span> is required</p>
+                
                 <Form.Group>
                     <Form.Label>Name <span className="required">*</span></Form.Label>
                     <Form.Control placeholder="Enter name"></Form.Control>
@@ -18,6 +19,7 @@ export class Contact extends Component {
                     <Form.Label>Email <span className="required">*</span></Form.Label>
                     <Form.Control type="email" placeholder="Enter email"></Form.Control>
                 </Form.Group>
+
                 <Form.Group>
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control placeholder="(xxx) xxx-xxxx"></Form.Control>
