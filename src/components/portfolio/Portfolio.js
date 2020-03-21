@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {NavigationBar} from '../navbar/NavigationBar';
 
 export class Portfolio extends Component {
     state = {
@@ -46,13 +47,24 @@ export class Portfolio extends Component {
         const { error, isLoaded, projects } = this.state;
         console.log(projects);
         if (error) {
-            return <div>{error}</div>;
+            return (
+                <div className="page">
+                    <NavigationBar />
+                    <h1 className="error"><b>{error}</b></h1>
+                </div>
+            );
         } else if (!isLoaded) {
-            return <div>Loading projects...</div>;
+            return (
+                <div className="page">
+                    <NavigationBar />
+                    <h1 className="loading"><b>Loading projects...</b></h1>
+                </div>
+            );
         } else {
             return (
                 <Container fluid className="page">
-                    <div><h1 className="header">My Portfolio</h1></div>
+                    <NavigationBar />
+                    <h1 className="header"><b>My Portfolio</b></h1>
                     <Row className="portfolio-row">
                         {projects.map(project => (
                             <Col xs="12" sm="12" md="6" lg="4" xl="3" style={{padding:"1vh"}}>
