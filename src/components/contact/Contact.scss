@@ -5,22 +5,27 @@
     form {
         color: white;
         background-color: $default-bg-color;
-        padding-top: 3%;
 
-        $horizPadding: 25%;
+        padding-top: 8vh;
+
+        $horizPadding: 25vw;
         padding-left: $horizPadding;
         padding-right: $horizPadding;
 
         h1 {
-            padding-bottom: 2%;
-        }
-        
-        .required {
-            color: red;
+            padding-bottom: 2vh;
         }
 
         button {
-            margin-bottom: 5vh;
+            margin-bottom: 1vh;
+        }
+
+        .success {
+            color: lightgreen;
+        }
+        
+        .required, .form-error {
+            color: red;
         }
     }
 }
