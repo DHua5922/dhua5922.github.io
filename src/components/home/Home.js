@@ -12,9 +12,6 @@ class Home extends Component {
             <h1>Dylan Hua</h1>
             <h2>Full Stack Developer and Cloud Software Developer</h2>
           </div>
-          <div>
-            
-          </div>
         </div>
       </div>
     );

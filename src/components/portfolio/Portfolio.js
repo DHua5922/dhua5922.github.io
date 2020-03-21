@@ -57,7 +57,7 @@ export class Portfolio extends Component {
             return (
                 <div className="page">
                     <NavigationBar />
-                    <h1 className="loading"><b>Loading projects...</b></h1>
+                    <h1 className="loading"><b>Loading...</b></h1>
                 </div>
             );
         } else {
