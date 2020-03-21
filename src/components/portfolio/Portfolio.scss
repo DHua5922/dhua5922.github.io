@@ -2,34 +2,53 @@
 
 .portfolio-row, .page {
     background-color: $default-bg-color;
+    overflow-x: hidden;
+}
+
+.page {
+    padding: 0 !important;
+    min-height: 100vh;
+
+    .error, .loading {
+        color: white;
+        font-size: 4rem;
+        text-align: center;
+        margin-top: 40vh;
+    }
 
     .header {
         padding-top: 5vh;
         padding-bottom: 2vh;
     }
 
-    .header, .img-label {
+    .header {
         color: white;
     }
     
-    .header, .img-label, h6 {
+    .header, h6 {
         text-align: center;
     }
 
-    .project-display {  
-        position: relative; 
+    .portfolio-row {
+        $horizMargin: 2vw;
+        padding-left: $horizMargin;
+        padding-right: $horizMargin;
 
-        img {
-            width: 100%;
-        }
-
-        h6 {
-            color: black;
-            background-color: white;
-            position: absolute;
-            bottom: 0;
-            margin-bottom: 0 !important;
-            width: 100%;
+        .project-display {  
+            position: relative; 
+    
+            img {
+                width: 100%;
+            }
+    
+            h6 {
+                color: black;
+                background-color: white;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 0 !important;
+                width: 100%;
+            }
         }
     }
 }
