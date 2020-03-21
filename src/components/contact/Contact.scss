@@ -1,20 +1,26 @@
 @import "../../index.scss";
-
-form {
-    color: white;
-    background-color: $default-bg-color;
+.page {
     height: 100vh;
-    padding-top: 5%;
 
-    $horizPadding: 25%;
-    padding-left: $horizPadding;
-    padding-right: $horizPadding;
+    form {
+        color: white;
+        background-color: $default-bg-color;
+        padding-top: 3%;
 
-    h1 {
-        padding-bottom: 2%;
-    }
-    
-    .required {
-        color: red;
+        $horizPadding: 25%;
+        padding-left: $horizPadding;
+        padding-right: $horizPadding;
+
+        h1 {
+            padding-bottom: 2%;
+        }
+        
+        .required {
+            color: red;
+        }
+
+        button {
+            margin-bottom: 5vh;
+        }
     }
 }
