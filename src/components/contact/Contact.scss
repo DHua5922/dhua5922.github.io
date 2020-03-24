@@ -14,17 +14,14 @@
 
         h1 {
             padding-bottom: 2vh;
+            text-align: center;
         }
 
         button {
             margin-bottom: 1vh;
         }
-
-        .success {
-            color: lightgreen;
-        }
         
-        .required, .form-error {
+        .required {
             color: red;
         }
     }
