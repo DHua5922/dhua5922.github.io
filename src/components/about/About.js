@@ -5,66 +5,30 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import './About.scss';
+import { Helmet } from 'react-helmet';
 
 export class About extends Component {
-    state = {
-        myInfo: null,
-        error: null,
-        isLoaded: false
-    };
-
-    componentDidMount() {
-        fetch(process.env.REACT_APP_ABOUT_URL)
-            .then(res => res.json())
-            .then(
-                result => {
-                    this.setState({
-                        error: null,
-                        myInfo: result,
-                        isLoaded: true
-                    });
-                },
-                error => {
-                    this.setState({
-                        error: "Cannot load",
-                        myInfo: null,
-                        isLoaded: true
-                    });
-                }
-            );
-    }
-
     render() {
-        const { error, isLoaded, myInfo } = this.state;
-        if (error) {
-            return (
-                <div className="page">
-                    <NavigationBar />
-                    <h1 className="error"><b>{error}</b></h1>
-                </div>
-            );
-        } else if (!isLoaded) {
-            return (
-                <div className="page">
-                    <NavigationBar />
-                    <h1 className="loading"><b>Loading...</b></h1>
-                </div>
-            );
-        } else {
-            return(
-                <Container fluid className="page">
-                    <NavigationBar />
-                    
-                    <Row className="about-row">
-                        <Col xs="12" sm="12" md="4"><Image src={require("../../img/" + myInfo.imgName)} /></Col>
-                        <Col xs="12" sm="12" md="8">
-                            <h1><b>About Me</b></h1>
-                            <p className="description">{myInfo.description}</p>
-                        </Col>
-                    </Row>
-                </Container>
-            );
-        }
-        
+        return(
+            <Container fluid className="page">
+                <Helmet>
+                    <title>About Me</title>
+                </Helmet>
+
+                <NavigationBar />
+
+                <Row className="about-row">
+                    <Col xs="12" sm="12" md="4"><Image src={require("../../img/img_me.jpg")} /></Col>
+                    <Col xs="12" sm="12" md="8">
+                        <h1><b>About Me</b></h1>
+                        <p className="description">
+                            I am a senior, majoring in Computer Science at UT Dallas. Currently, my interests are full stack development, 
+                            mobile app development, web development, and cloud computing. I built websites and mobile apps using several 
+                            technologies, and I enjoy applying new technologies to continue developing websites and mobile apps.
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+        ); 
     }
 }
