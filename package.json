@@ -2,6 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dhua5922.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,12 +11,15 @@
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "react-router-transition-switch": "^1.1.2",
     "react-scripts": "3.4.0",
     "sass": "^1.26.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
