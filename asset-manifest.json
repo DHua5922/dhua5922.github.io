@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0e3608cd.chunk.css",
+    "main.js": "/static/js/main.8db3fb6c.chunk.js",
+    "main.js.map": "/static/js/main.8db3fb6c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c43d354e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c43d354e.js.map",
+    "static/css/2.de424728.chunk.css": "/static/css/2.de424728.chunk.css",
+    "static/js/2.dfdd1f0e.chunk.js": "/static/js/2.dfdd1f0e.chunk.js",
+    "static/js/2.dfdd1f0e.chunk.js.map": "/static/js/2.dfdd1f0e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b8c56364d048266c71e083633cf144db.js": "/precache-manifest.b8c56364d048266c71e083633cf144db.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/static/css/2.de424728.chunk.css.map",
+    "static/css/main.0e3608cd.chunk.css.map": "/static/css/main.0e3608cd.chunk.css.map",
+    "static/js/2.dfdd1f0e.chunk.js.LICENSE.txt": "/static/js/2.dfdd1f0e.chunk.js.LICENSE.txt",
+    "static/media/img_arsphere.png": "/static/media/img_arsphere.f6bace5b.png",
+    "static/media/img_cars.jpg": "/static/media/img_cars.703ec32c.jpg",
+    "static/media/img_cmovie.png": "/static/media/img_cmovie.4ab7bce3.png",
+    "static/media/img_hospital.png": "/static/media/img_hospital.a5ef2a39.png",
+    "static/media/img_journalsite.png": "/static/media/img_journalsite.1ba068f2.png",
+    "static/media/Home.scss": "/static/media/img_me.7a7fbb1b.jpg",
+    "static/media/img_morse.jpg": "/static/media/img_morse.4eb6ca5c.jpg",
+    "static/media/img_nutrition.jpg": "/static/media/img_nutrition.a23ea6dc.jpg",
+    "static/media/img_shoppinglist.png": "/static/media/img_shoppinglist.ae6fe085.png",
+    "static/media/img_switcher.png": "/static/media/img_switcher.dd5a8f18.png",
+    "static/media/video_arsphere.mp4": "/static/media/video_arsphere.3de1af0d.mp4",
+    "static/media/video_hospital.mp4": "/static/media/video_hospital.e6194b05.mp4",
+    "static/media/video_journalsite.mp4": "/static/media/video_journalsite.ce991132.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c43d354e.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.dfdd1f0e.chunk.js",
+    "static/css/main.0e3608cd.chunk.css",
+    "static/js/main.8db3fb6c.chunk.js"
+  ]
+}
