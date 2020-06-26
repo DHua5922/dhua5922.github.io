@@ -64,18 +64,23 @@ export class Project extends Component {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    { this.props.project.demoUrl &&
-                        <a href={this.props.project.demoUrl}>
-                            <Button variant="primary">Demo</Button>
+                    { this.props.project.website &&
+                        <a href={this.props.project.website} rel="noopener noreferrer" target="_blank">
+                            <Button variant="primary">Website</Button>
+                        </a>
+                    }
+                    { this.props.project.android_app &&
+                        <a href={this.props.project.android_app} rel="noopener noreferrer" target="_blank">
+                            <Button variant="primary">Android App</Button>
                         </a>
                     }
                     { this.props.project.githubUrl &&
-                        <a href={this.props.project.githubUrl}>
+                        <a href={this.props.project.githubUrl} rel="noopener noreferrer" target="_blank">
                             <Button variant="primary">GitHub</Button>
                         </a>
                     }
-                    { this.props.project.presentationName &&
-                        <a href={this.props.project.presentationName}>
+                    { this.props.project.presentation &&
+                        <a href={this.props.project.presentation} rel="noopener noreferrer" target="_blank">
                             <Button variant="primary">Presentation</Button>
                         </a>
                     }

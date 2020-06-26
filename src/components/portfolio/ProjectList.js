@@ -1,12 +1,14 @@
+import IgnitePresentation from "../../document/acm_ignite_presentation.pdf";
+
 export const projectsList = [
     {
         name: "iNews",
         type: "Personal Project",
         startDate: "Jan 2020",
-        endDate: "Mar 2020",
-        imgName: "img_coming_soon.png",
-        demoUrl: "http://seenews.herokuapp.com/",
-        description: "This website shows news to users so that the users can be informed of current events, such as the growing issue with the coronavirus. The website was built with Python, Django, Heroku, Heroku Postgres, ElephantSQL, Angular, Typescript, Bootstrap 4, MDBoostrap, HTML5, and CSS3."
+        endDate: "May 2020",
+        imgName: "img_news.png",
+        website: "http://seenews.herokuapp.com/",
+        description: "This website shows news to users so that the users can be informed of current events, such as the growing issue with the coronavirus. The website was built with Python, Django, Heroku, Heroku Postgres, Angular, Typescript, Bootstrap 4, HTML5, and CSS3. Android application was built with NativeScript, Angular, and XML. It will appear on Google Play soon."
     },
     {
         name: "AR Sphere",
@@ -15,7 +17,7 @@ export const projectsList = [
         endDate: "Dec 2019",
         imgName: "img_arsphere.png",
         videoName: "video_arsphere.mp4",
-        "presentationName": "ACM%20Ignite%20Presentation.pdf",
+        presentation: IgnitePresentation,
         description: "For ACM Ignite, I worked with four other students to make an Android application for placing 3D models in the virtual world. Any models placed by the user can be seen by other users. Because of my previous experience with Unity, I was put in charge of designing the login page and model interaction using Unity. At presentation night, we presented our work to four judges who awarded us first place.  The app was built with Microsoft Azure, ASP.NET Core, Unity, Spatial Anchors, Microsoft SQL, and Blob Storage."
     },
     {
@@ -24,8 +26,8 @@ export const projectsList = [
         startDate: "Dec 2019",
         endDate: "Dec 2019",
         imgName: "img_nutrition.jpg",
-        "githubUrl": "https://github.com/DHua5922/NutriFind",
-        demoUrl: "https://www.huadylan.com/NutriFind/",
+        githubUrl: "https://github.com/DHua5922/NutriFind",
+        website: "https://www.huadylan.com/NutriFind/",
         description: "Website where users can see information, such as nutrients, about a particular food or drink by entering the name in the search bar. The website was built with HTML5, CSS3, BootstrapVue, Edamam Food Database API, and Vue.js."
     },
     {
@@ -34,7 +36,7 @@ export const projectsList = [
         startDate: "Nov 2019",
         endDate: "Nov 2019",
         imgName: "img_morse.jpg",
-        "githubUrl": "https://github.com/DHua5922/Project-Morse",
+        githubUrl: "https://github.com/DHua5922/Project-Morse",
         description: "For UTD Hackathon, I worked with three students from the University of Texas at Arlington to build an Android app within one day that allows those who are deaf to communicate more efficiently. The app converts text speech to Morse code, and the phone vibrates based on the Morse code.  The app was built with Java, Android Studio, and XML."
     },
     {
@@ -43,7 +45,7 @@ export const projectsList = [
         startDate: "Aug 2019",
         endDate: "Nov 2019",
         imgName: "img_shoppinglist.png",
-        demoUrl: "https://play.google.com/store/apps/details?id=com.dylanhua.simplebuylist&hl=en_US",
+        android_app: "https://play.google.com/store/apps/details?id=com.dylanhua.simplebuylist&hl=en_US",
         description: "This Android application that is easy to use helps users make several lists of items to buy at different stores.  The app was built with Java, C++, SQL, Room database, and XML."
     },
     {
@@ -52,8 +54,8 @@ export const projectsList = [
         startDate: "Aug 2019",
         endDate: "Sep 2019",
         imgName: "img_cmovie.png",
-        demoUrl: "https://www.huadylan.com/CMovie/",
-        "githubUrl": "https://github.com/DHua5922/CMovie",
+        website: "https://www.huadylan.com/CMovie/",
+        githubUrl: "https://github.com/DHua5922/CMovie",
         description: "Users can view information about movies, TV shows, and people. They simply have to enter a movie, TV show, or people in the search bar. If there are any results for that input, images will show up. CMovie was created with React, React Bootstrap, HTML, CSS, and The Movie Database API."
     },
     {
@@ -63,7 +65,7 @@ export const projectsList = [
         endDate: "Aug 2019",
         imgName: "img_journalsite.png",
         videoName: "video_journalsite.mp4",
-        "githubUrl": "https://github.com/DHua5922/JournalSite",
+        githubUrl: "https://github.com/DHua5922/JournalSite",
         description: "Users can use this website to write online journals about anything. In each journal, users can write entries for that particular journal. This website is created with AngularJS, Bootstrap 4, HTML, CSS, JavaScript, jQuery, PHP, MySQL, and SQL."
     },
     {
@@ -72,7 +74,7 @@ export const projectsList = [
         startDate: "May 2019",
         endDate: "Jun 2019",
         imgName: "img_inventorylist.png",
-        demoUrl: "https://play.google.com/store/apps/details?id=com.dylanhua.inventorylist&hl=en_US",
+        android_app: "https://play.google.com/store/apps/details?id=com.dylanhua.inventorylist&hl=en_US",
         description: "This android application is for managing your inventories. Whether you are a college student or are traveling, you can use this application to track how much items you have. Inventory List is built with Kotlin and SQL."
     },
     {
@@ -81,16 +83,7 @@ export const projectsList = [
         startDate: "Sep 2017",
         endDate: "Dec 2017",
         imgName: "img_switcher.png",
-        "githubUrl": "https://github.com/DHua5922/Model-Switcher",
+        githubUrl: "https://github.com/DHua5922/Model-Switcher",
         description: "For ACM Projects, I worked with 4 others to create an augmented reality application. After brainstorming ideas, we decided that each of us create our own game in augmented reality so that we can merge all the games into a single application. This led me to create the Model Switcher game. After merging the games and presenting our application, the 3 judges chose us as winners of ACM Projects because our project is original and can be expanded for business pursposes.  This game displays the unique animations of the President, slime, knight, and dinosaur on a $1 bill when the three-dimensional models are triggered to appear in augmented reality."
-    },
-    {
-        name: "Portfolio Website",
-        type: "Personal Project",
-        startDate: "Mar 2019",
-        endDate: "Mar 2019",
-        imgName: "img_coming_soon.png",
-        demoUrl: "https://www.huadylan.com/",
-        description: "My website that shows all the projects I did."
     }
 ]
