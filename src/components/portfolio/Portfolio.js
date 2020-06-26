@@ -22,7 +22,6 @@ export class Portfolio extends Component {
 	}
 
     render() {
-        console.log(projectsList);
         return (
             <Container fluid className="page">
                 <Helmet>
@@ -45,7 +44,10 @@ export class Portfolio extends Component {
                     ))}
                 </Row>
                 {this.state.showProject &&
-                    <Project toggleClickedProject={this.toggleClickedProject} show={this.state.showProject} project={this.state.clickedProject} />
+                    <Project 
+                        toggleClickedProject={this.toggleClickedProject} 
+                        show={this.state.showProject} 
+                        project={this.state.clickedProject} />
                 }           
             </Container>
         );   
