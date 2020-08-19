@@ -49,26 +49,6 @@ export const projectsList = [
         description: "This Android application that is easy to use helps users make several lists of items to buy at different stores.  The app was built with Java, C++, SQL, Room database, and XML."
     },
     {
-        name: "CMovie",
-        type: "Personal Project",
-        startDate: "Aug 2019",
-        endDate: "Sep 2019",
-        imgName: "img_cmovie.png",
-        website: "https://www.huadylan.com/CMovie/",
-        githubUrl: "https://github.com/DHua5922/CMovie",
-        description: "Users can view information about movies, TV shows, and people. They simply have to enter a movie, TV show, or people in the search bar. If there are any results for that input, images will show up. CMovie was created with React, React Bootstrap, HTML, CSS, and The Movie Database API."
-    },
-    {
-        name: "JournalSite",
-        type: "Personal Project",
-        startDate: "May 2019",
-        endDate: "Aug 2019",
-        imgName: "img_journalsite.png",
-        videoName: "video_journalsite.mp4",
-        githubUrl: "https://github.com/DHua5922/JournalSite",
-        description: "Users can use this website to write online journals about anything. In each journal, users can write entries for that particular journal. This website is created with AngularJS, Bootstrap 4, HTML, CSS, JavaScript, jQuery, PHP, MySQL, and SQL."
-    },
-    {
         name: "Inventory List",
         type: "Personal Project",
         startDate: "May 2019",

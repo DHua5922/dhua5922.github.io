@@ -3,10 +3,6 @@ import Form from 'react-bootstrap/Form';
 import './Contact.scss';
 
 export class InputGroup extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {label, name, type, as, placeholder, required} = this.props;
 
