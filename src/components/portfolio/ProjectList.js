@@ -2,6 +2,15 @@ import IgnitePresentation from "../../document/acm_ignite_presentation.pdf";
 
 export const projectsList = [
     {
+        name: "Chatterus",
+        type: "Personal Project",
+        startDate: "Jun 2020",
+        endDate: "Aug 2020",
+        imgName: "img_chatterus.png",
+        website: "https://chatterus.herokuapp.com/",
+        description: "This website allows users to chat with each other. The website was built with React, React Bootstrap, HTML, and CSS. The API was developed using Node.js and Express.js for sending and retrieving messages from NoSQL MongoDB database."
+    },
+    {
         name: "iNews",
         type: "Personal Project",
         startDate: "Jan 2020",
