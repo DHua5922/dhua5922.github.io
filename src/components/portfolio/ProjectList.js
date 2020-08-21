@@ -8,7 +8,7 @@ export const projectsList = [
         endDate: "Aug 2020",
         imgName: "img_chatterus.png",
         website: "https://chatterus.herokuapp.com/",
-        description: "This website allows users to chat with each other. The website was built with React, React Bootstrap, HTML, and CSS. The API was developed using Node.js and Express.js for sending and retrieving messages from NoSQL MongoDB database."
+        description: `This website allows users to chat with each other. The website was created using React, React Bootstrap, HTML, and Sass. The API for modifying chats and retrieving messages from NoSQL MongoDB database was constructed using Node.js and Express.js. Full stack: MERN`
     },
     {
         name: "iNews",
@@ -17,7 +17,7 @@ export const projectsList = [
         endDate: "May 2020",
         imgName: "img_news.png",
         website: "http://seenews.herokuapp.com/",
-        description: "This website shows news to users so that the users can be informed of current events, such as the growing issue with the coronavirus. The website was built with Python, Django, Heroku, Heroku Postgres, Angular, Typescript, Bootstrap 4, HTML5, and CSS3. Android application was built with NativeScript, Angular, and XML. It will appear on Google Play soon."
+        description: "This website shows news to users so that the users can be informed of current events, such as the growing issue with the coronavirus. The website was built with Python, Django, Heroku, Heroku Postgres, Angular, Typescript, Bootstrap 4, HTML5, and Sass. Android application was built with NativeScript, Angular, and XML. It will appear on Google Play soon."
     },
     {
         name: "AR Sphere",
@@ -37,7 +37,7 @@ export const projectsList = [
         imgName: "img_nutrition.jpg",
         githubUrl: "https://github.com/DHua5922/NutriFind",
         website: "https://www.huadylan.com/NutriFind/",
-        description: "Website where users can see information, such as nutrients, about a particular food or drink by entering the name in the search bar. The website was built with HTML5, CSS3, BootstrapVue, Edamam Food Database API, and Vue.js."
+        description: "Website where users can see information, such as nutrients, about a particular food or drink by entering the name in the search bar. The appearance was designed with HTML5, CSS3, and BootstrapVue. Axios and vue.js were used to call information from the Edamam Food Database API."
     },
     {
         name: "Project Morse",
