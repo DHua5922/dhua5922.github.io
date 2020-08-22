@@ -8,6 +8,7 @@ export const projectsList = [
         endDate: "Aug 2020",
         imgName: "img_chatterus.png",
         website: "https://chatterus.herokuapp.com/",
+        githubUrl: "https://github.com/DHua5922/chatterus-web",
         description: `This website allows users to chat with each other. The website was created using React, React Bootstrap, HTML, and Sass. The API for modifying chats and retrieving messages from NoSQL MongoDB database was constructed using Node.js and Express.js. Full stack: MERN`
     },
     {
@@ -17,6 +18,7 @@ export const projectsList = [
         endDate: "May 2020",
         imgName: "img_news.png",
         website: "http://seenews.herokuapp.com/",
+        githubUrl: "https://github.com/DHua5922/iNews-frontend",
         description: "This website shows news to users so that the users can be informed of current events, such as the growing issue with the coronavirus. The website was built with Python, Django, Heroku, Heroku Postgres, Angular, Typescript, Bootstrap 4, HTML5, and Sass. Android application was built with NativeScript, Angular, and XML. It will appear on Google Play soon."
     },
     {
