@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
 import {Project} from '../project/Project';
 import './Portfolio.scss';
-import Image from 'react-bootstrap/Image';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import {NavigationBar} from '../navbar/NavigationBar';
 import {projectsList} from './ProjectList';
-import { Helmet } from 'react-helmet';
+import {FaInfo} from "react-icons/fa";
+import { Row, Col, Card } from 'react-bootstrap';
 
 export class Portfolio extends Component {
     state = {
@@ -23,23 +19,21 @@ export class Portfolio extends Component {
 
     render() {
         return (
-            <Container fluid className="page">
-                <Helmet>
-                    <title>My Portfolio</title>
-                </Helmet>
-
-                <NavigationBar />
-
-                <h1 className="header"><b>My Portfolio</b></h1>
-                <Row className="portfolio-row">
+            <section id="portfolio">
+                <h1 className="header"><b>Portfolio</b></h1>
+                <Row>
                     {projectsList.map(project => (
-                        <Col xs="12" sm="12" md="6" lg="4" xl="3" style={{padding:"1vh"}}>
-                            <div className="project-display">                    
-                                    <Image 
-                                        onClick={(event) => this.setState({clickedProject: project}, this.toggleClickedProject(true))}
-                                        src={require("../../img/" + project.imgName)}/>      
-                                <h6><div>{project.name}</div></h6>
-                            </div>
+                        <Col className="project-col" xs="12" sm="6" lg="4">
+                            <Card className="project-display">
+                                <Card.Img className="img" src={require("../../img/" + project.imgName)}/>      
+                                <Card.Body className="label">   
+                                    <Card.Title className="name">{project.name}</Card.Title>  
+                                    <div className="info-icon"
+                                        onClick={() => this.setState({clickedProject: project}, this.toggleClickedProject(true))}>
+                                            <FaInfo />
+                                    </div>
+                                </Card.Body>    
+                            </Card>
                         </Col>
                     ))}
                 </Row>
@@ -49,7 +43,7 @@ export class Portfolio extends Component {
                         show={this.state.showProject} 
                         project={this.state.clickedProject} />
                 }           
-            </Container>
+            </section>
         );   
     }
 }

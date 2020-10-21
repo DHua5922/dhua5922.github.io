@@ -1,26 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './components/home/Home';
 import {About} from './components/about/About';
 import {Portfolio} from './components/portfolio/Portfolio';
 import {Contact} from './components/contact/Contact';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Switch from 'react-router-transition-switch';
+import "./index.scss";
 
 const routing = (
-    <Router>
-        <Switch>
-            <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/portfolio" component={Portfolio}/>
-                <Route path="/contact" component={Contact}/>
-                
-            </div>
-        </Switch>
-    </Router>
+    <main>
+        <About />
+        <Portfolio />
+        <Contact />
+    </main>
 )
 
 ReactDOM.render(routing, document.getElementById('root'))
