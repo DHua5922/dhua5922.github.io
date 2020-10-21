@@ -1,26 +1,33 @@
-@import "../../index.scss";
+#about {
+    background-color: white;
+    color: black;
+    padding: 80px 15%;
 
-.page {
-    background-color: $default-bg-color;
-
-    .about-row {
-        margin-top: 10vh;
-        margin-left: 10vw;
-        margin-right: 5vw;
+    #left-col {
+        text-align: center;
 
         img {
-            float: right;
-            height: 70vh;
-            width: 30vw;
+            padding: 20px 0;
         }
 
-        h1 {
-            margin-bottom: 5vh;
+        #name {
+            font-size: 3rem;
+        }
+
+        #icon-list {
+            display: block;
+            font-size: 2.5rem;
+        }
+    }  
+    
+    #right-col {
+
+        #title {
+            font-size: 3rem;
         }
     
-        h1, .description {
-            color: white;
-            padding-left: 2vw;
+        #description {
+            font-size: 1.25rem;
         }
     }
 }

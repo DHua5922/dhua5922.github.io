@@ -1,26 +1,35 @@
-@import "../../index.scss";
-.page {
-    height: 100vh;
+#contact {
+    background-color: #4C9DFF;
+    text-align: center;
+    padding: 60px 35%;
 
     form {
-        color: white;
-        background-color: $default-bg-color;
+        background-color: #FAFAFA;
+        padding: 50px 10%;
+        overflow-x: hidden;
 
-        padding-top: 8vh;
+        #title {
+            padding-bottom: 12px;
+            font-weight: bold;
+        }
 
-        $horizPadding: 25vw;
-        padding-left: $horizPadding;
-        padding-right: $horizPadding;
+        .form-group {
+            text-align: left;
 
-        h1 {
-            padding-bottom: 2vh;
-            text-align: center;
+            input, textarea {
+                border-radius: 0;
+                border-width: 2px;
+            }
         }
 
         button {
-            margin-bottom: 1vh;
+            margin-top: 30px;
+            background-color: #0074FF;
+            border-radius: 0;
+            color: white;
+            padding: 1vh 2vw;
         }
-        
+
         .required {
             color: red;
         }
