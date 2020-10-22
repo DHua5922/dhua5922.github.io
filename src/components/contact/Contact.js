@@ -50,7 +50,7 @@ export function Contact() {
                     placeholder="Enter message"
                 />      
 
-                <Button variant="light" type="submit">Submit</Button>
+                <Button type="submit">Submit</Button>
             </Form>  
         </section>
     );

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Form from 'react-bootstrap/Form';
-import './Contact.scss';
+import './InputGroup.scss';
 
 export class InputGroup extends Component {
     render() {
@@ -11,7 +11,7 @@ export class InputGroup extends Component {
                 { required ?
                     (
                         <>
-                            <Form.Label>{label} <span className="required">*</span></Form.Label>
+                            <Form.Label>{label}</Form.Label>
                             <Form.Control name={name} type={type} as={as} placeholder={placeholder} required></Form.Control>
                         </>
                     ) : 
