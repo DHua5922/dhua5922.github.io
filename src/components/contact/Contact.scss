@@ -1,37 +1,26 @@
 #contact {
-    background-color: #4C9DFF;
-    text-align: center;
-    padding: 60px 35%;
+    background-color: #111134;
+    padding: 100px 10%;
+    color: white;
 
     form {
-        background-color: #FAFAFA;
-        padding: 50px 10%;
-        overflow-x: hidden;
+        margin: auto;
+        max-width: 500px;
 
         #title {
             padding-bottom: 12px;
             font-weight: bold;
-        }
-
-        .form-group {
-            text-align: left;
-
-            input, textarea {
-                border-radius: 0;
-                border-width: 2px;
-            }
+            text-align: center;
         }
 
         button {
-            margin-top: 30px;
-            background-color: #0074FF;
+            border: 0;
+            background-color: #28a745;
+            margin-top: 15px;
             border-radius: 0;
-            color: white;
-            padding: 1vh 2vw;
-        }
-
-        .required {
-            color: red;
+            padding: 12px 0;
+            width: 100%;
+            box-shadow: none;
         }
     }
 }
