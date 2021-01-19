@@ -2,6 +2,15 @@ import IgnitePresentation from "../../document/acm_ignite_presentation.pdf";
 
 export const projectsList = [
     {
+        name: "JournalSite",
+        type: "Personal Project",
+        startDate: "Oct 2020",
+        endDate: "Dec 2020",
+        imgName: "img_journal.png",
+        githubUrl: "https://github.com/DHua5922/journalsite-backend",
+        description: "This is a website for users to write in online journals. Front-end was built with ReactJS. Back-end was built with Java and SpringBoot as microservice. The front-end was deployed to AWS S3 through GitHub Action for CI/CD, and the back-end was deployed to AWS EC2 through GitHub action for CI/CD and docker."
+    },
+    {
         name: "Service Catalog",
         type: "Work",
         startDate: "Dec 2019",

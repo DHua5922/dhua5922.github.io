@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Project} from '../project/Project';
 import './Portfolio.scss';
 import {projectsList} from './ProjectList';
-import {FaInfo} from "react-icons/fa";
 import { Row, Col, Card } from 'react-bootstrap';
 
 export class Portfolio extends Component {
@@ -24,14 +23,10 @@ export class Portfolio extends Component {
                 <Row>
                     {projectsList.map(project => (
                         <Col className="project-col" xs="12" sm="6" lg="4">
-                            <Card className="project-display">
+                            <Card className="project-display" onClick={() => this.setState({clickedProject: project}, this.toggleClickedProject(true))}>
                                 <Card.Img className="img" src={require("../../img/" + project.imgName)}/>      
                                 <Card.Body className="label">   
                                     <Card.Title className="name">{project.name}</Card.Title>  
-                                    <div className="info-icon"
-                                        onClick={() => this.setState({clickedProject: project}, this.toggleClickedProject(true))}>
-                                            <FaInfo />
-                                    </div>
                                 </Card.Body>    
                             </Card>
                         </Col>
