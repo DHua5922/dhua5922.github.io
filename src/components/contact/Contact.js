@@ -33,7 +33,7 @@ export function Contact() {
                 />  
 
                 <InputGroup
-                    required={false}
+                    required={true}
                     label="Subject"
                     name="subject"
                     type="text"
