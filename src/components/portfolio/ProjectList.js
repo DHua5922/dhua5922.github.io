@@ -83,25 +83,25 @@ export const projectsList = [
     {
         name: "Chatterus",
         type: "Personal Project",
-        startDate: "Jun 2020",
-        endDate: "Aug 2020",
+        startDate: "Feb 2021",
+        endDate: "Mar 2021",
         imgName: "img_chatterus.jpg",
         links: [
             {
-                url: "https://gitlab.com/DHua5922/chatterus-web",
+                url: "https://chatterus.herokuapp.com/",
+                label: "Website"
+            },
+            {
+                url: "https://github.com/DHua5922/chatterus-frontend",
                 label: "Front End Code"
             },
             {
-                url: "https://gitlab.com/DHua5922/gtext",
+                url: "https://github.com/DHua5922/chatterus-backend",
                 label: "Back End Code"
-            }
+            },
         ],
         description: `
-            This website allows users to chat with each other. 
-
-            For the front-end, the website was created with React, React Bootstrap, TypeScript, HTML, and CSS / Sass.
-
-            For the back-end, the web service was created with Node.js and Express for deleting, creating, and accessing chats from MongoDB. 
+            This website allows users to chat with each other. The website was built with MERN stack (MongoDB, Express, Node.js, and React).
         `
     }
 ]
