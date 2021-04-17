@@ -4,7 +4,7 @@ export const projectsList = [
         type: "Work",
         startDate: "Dec 2019",
         endDate: "Mar 2020",
-        imgName: "service_catalog.png",
+        imgName: "img_service_catalog.png",
         links: [{
             url: "https://www.utdallas.edu/oit/services/",
             label: "Website"
@@ -18,6 +18,26 @@ export const projectsList = [
             deployed to WordPress.
 
             I also maintain this website by changing or adding necessary features to make the website more useful.
+        `,
+    },
+    {
+        name: "CMovie",
+        type: "Personal Project",
+        startDate: "Apr 2021",
+        endDate: "Apr 2021",
+        imgName: "img_cmovie.png",
+        links: [
+            {
+                url: "https://www.huadylan.com/CMovie/",
+                label: "Website"
+            },
+            {
+                url: "https://github.com/DHua5922/CMovie",
+                label: "Code"
+            },
+        ],
+        description: `
+            This website was built with React to make it easier to search for movies to watch.
         `,
     },
     {
@@ -39,46 +59,6 @@ export const projectsList = [
         description: `
             In a Scrum team of 5, I built a stock predictor website that decides whether a stock is good or bad depending on the headlines. Throughout this internship, I added features, such as displaying stock quote from Finnhub API, for the website based on the tickets from Jira. I also improved code from pull requests and reported my progress in bi-weekly stand up meetings. The front-end was created with React, HTML, and CSS. The back-end was created with Node.js and Express. Stock data was retrieved from Finnhub's API.
         `,
-    },
-    {
-        name: "newsgen",
-        type: "Personal Project",
-        startDate: "Jan 2021",
-        endDate: "Feb 2021",
-        imgName: "img_news.jpg",
-        links: [
-            {
-                url: "https://github.com/DHua5922/newsgen-frontend",
-                label: "Front End Code",
-            },
-            {
-                url: "https://github.com/DHua5922/newsgen-backend",
-                label: "Back End Code",
-            },
-        ],
-        description: `
-            Website for marking favorite news. Project was managed using ClickUp's Agile features.
-            Front end was built with Next.js as React framework and styled with HTML, CSS, Tailwind, and Styled components.
-            Back end was built with Java, Spring Boot, and MySQL.
-        `
-    },
-    {
-        name: "JournalSite",
-        type: "Personal Project",
-        startDate: "Oct 2020",
-        endDate: "Dec 2020",
-        imgName: "img_journal.png",
-        links: [
-            {
-                url: "https://github.com/DHua5922/journalsite",
-                label: "Front End Code"
-            },
-            {
-                url: "https://github.com/DHua5922/journalsite-backend",
-                label: "Back End Code"
-            }
-        ],
-        description: "This is a website for users to write in online journals. Front-end was built with ReactJS. Back-end was built with Java and SpringBoot as microservice. The front-end was deployed to AWS S3 through GitHub Action for CI/CD, and the back-end was deployed to AWS EC2 through GitHub action for CI/CD and docker."
     },
     {
         name: "Chatterus",
@@ -103,5 +83,27 @@ export const projectsList = [
         description: `
             This website allows users to chat with each other. The website was built with MERN stack (MongoDB, Express, Node.js, and React).
         `
-    }
+    },
+    {
+        name: "newsgen",
+        type: "Personal Project",
+        startDate: "Jan 2021",
+        endDate: "Feb 2021",
+        imgName: "img_news.jpg",
+        links: [
+            {
+                url: "https://github.com/DHua5922/newsgen-frontend",
+                label: "Front End Code",
+            },
+            {
+                url: "https://github.com/DHua5922/newsgen-backend",
+                label: "Back End Code",
+            },
+        ],
+        description: `
+            Website for marking favorite news. Project was managed using ClickUp's Agile features.
+            Front end was built with Next.js as React framework and styled with HTML, CSS, Tailwind, and Styled components.
+            Back end was built with Java, Spring Boot, and MySQL.
+        `
+    },
 ]
