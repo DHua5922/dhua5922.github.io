@@ -32,16 +32,7 @@ export function About() {
                 <Col id="right-col" xs="12" lg="7" xl="8">
                     <h1 id="title">About</h1>
                     <p id="description">
-                        I am a senior majoring in Computer Science and working part-time as a Junior Web Portal UI Developer for The University of 
-                        Texas at Dallas (UT Dallas). I use my experience in full stack development to create mobile applications and websites.
-                        <br/><br/>
-                        As a Web Portal UI Developer, I successfully used my front end and back end skills to create a service catalog website with
-                        2 developers that lets over 20,000 UT Dallas students use IT services offered by the Office of Information Technology.
-
-                        Also, I won first place in ACM Projects and ACM Ignite while working in a diverse team of other developers.
-                        <br/><br/>
-                        Currently, I am looking for full-time or internship opportunities in software engineering, 
-                        front end development, back end development, or full stack development.
+                        As Web Portal UI Developer, I have experience in front end development with React, HTML, and CSS. I was also a software developer intern for Codubee in which I gained full stack development experience using Node.js and React.
                     </p>
                 </Col>
             </Row>   
