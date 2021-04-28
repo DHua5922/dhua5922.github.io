@@ -6,12 +6,15 @@ import {Contact} from './components/contact/Contact';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.scss";
+import Footer from './components/footer/Footer';
+import "tailwindcss/tailwind.css";
 
 const routing = (
     <main>
         <About />
         <Portfolio />
         <Contact />
+        <Footer />
     </main>
 )
 

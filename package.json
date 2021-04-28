@@ -16,7 +16,10 @@
     "react-router-dom": "^5.1.2",
     "react-router-transition-switch": "^1.1.2",
     "react-scripts": "^4.0.3",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "styled-components": "^5.2.3",
+    "tailwindcss": "^2.1.2",
+    "twin.macro": "^2.4.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -43,5 +46,11 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
+  },
+  "babelMacros": {
+    "twin": {
+        "config": "./src/tailwind.config.js",
+        "preset": "styled-components"
+    }
   }
 }
