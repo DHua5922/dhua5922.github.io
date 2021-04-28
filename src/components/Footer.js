@@ -1,11 +1,11 @@
 import tw, { styled } from 'twin.macro';
 import React from "react";
-import { IconLink } from '../views/IconLink';
+import { IconLink } from './views/IconLink';
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 const StyledFooter = styled.div`
-    ${tw`bg-black justify-between flex px-7 py-3 items-center text-white`}
+    ${tw`sticky bottom-0 bg-black justify-between flex px-7 py-3 items-center text-white`}
 `;
 
 export default function Footer() {
