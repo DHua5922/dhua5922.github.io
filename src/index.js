@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {About} from './components/about/About';
 import {Portfolio} from './components/portfolio/Portfolio';
 import {Contact} from './components/contact/Contact';
 import * as serviceWorker from './serviceWorker';
@@ -9,6 +8,7 @@ import "./index.scss";
 import Footer from './components/Footer';
 import "tailwindcss/tailwind.css";
 import Navbar from './components/Navbar';
+import About from './sections/About';
 
 const routing = (
     <main>
