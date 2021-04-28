@@ -1,4 +1,4 @@
-export const projectsList = [
+const projectsList = [
     {
         name: "Service Catalog",
         imgName: "img_service_catalog.png",
@@ -91,4 +91,6 @@ export const projectsList = [
             Back end was built with Java, Spring Boot, and MySQL.
         `
     },
-]
+];
+
+export default projectsList;
