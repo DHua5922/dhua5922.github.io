@@ -4,8 +4,6 @@ import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 export class Project extends Component {
 
@@ -41,24 +39,9 @@ export class Project extends Component {
                         </span>
                     </small>
                     <Container fluid className="media-container">
-                        { this.props.project.videoName ? 
-                            (<Row>
-                                <Col>
-                                    <Image 
-                                        style={{width: "100%"}}
-                                        src={"images/" + this.props.project.imgName} />
-                                </Col>
-                                <Col>
-                                        <video width="100%" height="100%" controls>
-                                            <source src={require("../../video/" + this.props.project.videoName)} type="video/mp4"></source>
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    
-                                </Col>
-                            </Row>) : (<Image 
-                                                style={{width: "50%"}}
-                                                src={"images/" + this.props.project.imgName} />)
-                        }
+                        <Image 
+                            style={{width: "50%"}}
+                            src={`images/${this.props.project.imgName}`} />
                     </Container>
                     <p>{this.props.project.description}</p>        
                 </Modal.Body>

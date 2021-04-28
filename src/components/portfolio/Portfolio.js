@@ -24,7 +24,7 @@ export class Portfolio extends Component {
                     {projectsList.map(project => (
                         <Col className="project-col" xs="12" sm="6" lg="4">
                             <Card className="project-display" onClick={() => this.setState({clickedProject: project}, this.toggleClickedProject(true))}>
-                                <Card.Img className="img" src={"images/" + project.imgName}/>      
+                                <Card.Img className="img" src={`images/${project.imgName}`}/>      
                                 <Card.Body className="label">   
                                     <Card.Title className="name">{project.name}</Card.Title>  
                                 </Card.Body>    
