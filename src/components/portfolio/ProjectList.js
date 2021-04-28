@@ -1,9 +1,6 @@
 export const projectsList = [
     {
         name: "Service Catalog",
-        type: "Work",
-        startDate: "Dec 2019",
-        endDate: "Mar 2020",
         imgName: "img_service_catalog.png",
         links: [{
             url: "https://www.utdallas.edu/oit/services/",
@@ -22,9 +19,6 @@ export const projectsList = [
     },
     {
         name: "CMovie",
-        type: "Personal Project",
-        startDate: "Apr 2021",
-        endDate: "Apr 2021",
         imgName: "img_cmovie.png",
         links: [
             {
@@ -42,9 +36,6 @@ export const projectsList = [
     },
     {
         name: "Stock Predictor",
-        type: "Work",
-        startDate: "Oct 2020",
-        endDate: "Jan 2021",
         imgName: "img_stock.jpg",
         links: [
             {
@@ -62,9 +53,6 @@ export const projectsList = [
     },
     {
         name: "Chatterus",
-        type: "Personal Project",
-        startDate: "Feb 2021",
-        endDate: "Mar 2021",
         imgName: "img_chatterus.jpg",
         links: [
             {
@@ -86,9 +74,6 @@ export const projectsList = [
     },
     {
         name: "newsgen",
-        type: "Personal Project",
-        startDate: "Jan 2021",
-        endDate: "Feb 2021",
         imgName: "img_news.jpg",
         links: [
             {
