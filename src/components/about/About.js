@@ -12,7 +12,7 @@ export function About() {
         <section id="about">
             <Row noGutters>
                 <Col id="left-col" xs="12" lg="5" xl="4">
-                    <Image src={require("../../img/img_me.jpg")} />
+                    <Image src="images/img_me.jpg"/>
                     <h1 id="name">Dylan Hua</h1>
                     <div id="icon-list">
                         <IconLink 

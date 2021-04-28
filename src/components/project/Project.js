@@ -46,7 +46,7 @@ export class Project extends Component {
                                 <Col>
                                     <Image 
                                         style={{width: "100%"}}
-                                        src={require("../../img/" + this.props.project.imgName)} />
+                                        src={"images/" + this.props.project.imgName} />
                                 </Col>
                                 <Col>
                                         <video width="100%" height="100%" controls>
@@ -57,7 +57,7 @@ export class Project extends Component {
                                 </Col>
                             </Row>) : (<Image 
                                                 style={{width: "50%"}}
-                                                src={require("../../img/" + this.props.project.imgName)} />)
+                                                src={"images/" + this.props.project.imgName} />)
                         }
                     </Container>
                     <p>{this.props.project.description}</p>        
