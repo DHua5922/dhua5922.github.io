@@ -1,10 +1,11 @@
 import { Navbar as BNavbar, Nav } from 'react-bootstrap';
 import React from "react";
+import tw, { styled } from "twin.macro";
 
 const links = [
     {
         href: "#about",
-        label: "About Me"
+        label: "About"
     },
     {
         href: "#portfolio",
@@ -12,14 +13,17 @@ const links = [
     },
     {
         href: "#contact",
-        label: "Contact Me"
+        label: "Contact"
     },
 ];
 
+const SNavbar = styled(BNavbar)`
+    ${tw`bg-black`}
+`;
+
 export default function Navbar() {
     return (
-        <BNavbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
-            <BNavbar.Brand href="#about">Dylan Hua</BNavbar.Brand>
+        <SNavbar collapseOnSelect expand="lg" variant="dark" sticky="top">
             <BNavbar.Toggle aria-controls="responsive-navbar-nav" />
             <BNavbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto mr-auto">
@@ -31,6 +35,6 @@ export default function Navbar() {
                     }
                 </Nav>
             </BNavbar.Collapse>
-        </BNavbar>
+        </SNavbar>
     );
 }
