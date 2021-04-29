@@ -10,8 +10,7 @@ const Section = styled.section`
 `;
 
 const Header = styled.h1`
-    padding-bottom: 2vh;
-    ${tw`text-center text-black font-bold`}
+    ${tw`text-center mb-8 font-bold`}
 `;
 
 const ProjectDisplay = styled(Card)`

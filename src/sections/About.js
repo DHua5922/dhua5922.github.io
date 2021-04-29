@@ -8,7 +8,7 @@ const Section = styled.section`
 `;
 
 const Header = styled.h1`
-    ${tw`text-4xl text-center mb-8 font-bold`}
+    ${tw`text-center mb-8 font-bold`}
 `;
 
 const Row = styled.div`
@@ -22,7 +22,7 @@ const Description = styled.p`
 export default function About() {
     return (
         <Section id="about">
-            <Header>About</Header>
+            <Header>About Me</Header>
             <Row>
                 <Image tw="block mx-auto" src="images/img_me.jpg"/>
                 <div tw="p-5" />

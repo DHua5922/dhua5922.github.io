@@ -6,7 +6,7 @@ import tw, { styled } from "twin.macro";
 
 const Section = styled.section`
     background-color: #111134;
-    padding: 100px 10%;
+    padding: 60px 10vw;
     ${tw`text-white`}
 `;
 
@@ -15,9 +15,8 @@ const SForm = styled(Form)`
     ${tw`m-auto`}
 `;
 
-const Header = styled.h2`
-    padding-bottom: 12px;
-    ${tw`text-center font-bold`}
+const Header = styled.h1`
+    ${tw`text-center mb-8 font-bold`}
 `;
 
 const SubmitButton = styled(Button)`
