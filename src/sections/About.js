@@ -1,35 +1,24 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image';
 import tw, { styled } from "twin.macro";
 
 const Section = styled.section`
-    padding: 60px 10vw;
-    ${tw`bg-white text-black`}
+    padding: 300px 10vw;
+    ${tw`bg-white text-black text-center h-screen`}
 `;
 
-const Header = styled.h1`
-    ${tw`text-center mb-8 font-bold`}
+const Name = styled.h1`
+    ${tw`text-8xl mb-12`}
 `;
 
-const Row = styled.div`
-    ${tw`justify-center block md:flex`}
-`;
-
-const Description = styled.p`
-    ${tw`text-xl`}
+const Description = styled.h1`
+    ${tw`text-lg`}
 `;
 
 export default function About() {
     return (
         <Section id="about">
-            <Header>About Me</Header>
-            <Row>
-                <Image tw="block mx-auto" src="images/img_me.jpg"/>
-                <div tw="p-5" />
-                <Description>
-                    As Web Portal UI Developer, I have experience in front end development with React, HTML, and CSS. I was also a software developer intern for Codubee in which I gained full stack development experience using Node.js and React.
-                </Description>
-            </Row>
+            <Name>Dylan Hua</Name>
+            <Description>Front End Developer</Description>
         </Section>
     ); 
 }
