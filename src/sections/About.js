@@ -2,8 +2,8 @@ import React from 'react';
 import tw, { styled } from "twin.macro";
 
 const Section = styled.section`
-    padding: 300px 10vw;
-    ${tw`bg-white text-black text-center h-screen`}
+    padding: 40vh 10vw;
+    ${tw`bg-white text-black text-center`}
 `;
 
 const Name = styled.h1`
