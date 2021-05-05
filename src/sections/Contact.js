@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Field from '../components/views/Field';
 import tw, { styled } from "twin.macro";
+import ScrollBounce from '../components/views/ScrollBounce';
 
 const Section = styled.section`
     background-color: #111134;
@@ -59,16 +60,18 @@ const fields = [
 
 export default function Contact() {
     return(
-        <Section id="contact">                
-            <SForm 
-                action="https://formspree.io/hua.dylan@gmail.com"
-                method="POST"
-                validated
-            >
-                <Header>Contact Me</Header>
-                { fields.map(field => <Field {...field} />) }
-                <SubmitButton type="submit">Submit</SubmitButton>
-            </SForm>  
-        </Section>
+        <ScrollBounce>             
+            <Section id="contact">
+                <SForm 
+                    action="https://formspree.io/hua.dylan@gmail.com"
+                    method="POST"
+                    validated
+                >
+                    <Header>Contact Me</Header>
+                    { fields.map(field => <Field {...field} />) }
+                    <SubmitButton type="submit">Submit</SubmitButton>
+                </SForm> 
+            </Section>
+        </ScrollBounce> 
     );
 }
