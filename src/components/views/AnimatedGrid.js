@@ -8,18 +8,16 @@ export default function AnimatedGrid({ children }) {
             {({ size }) => {    
                 const { width } = size;
 
-                // initially 3 columns
-                let columnWidth = "33.33%";
+                // initially 2 columns
+                let columnWidth = "50%";
                 // 1 column
                 if(width < 576) columnWidth = "100%";
-                // 2 column
-                else if(width < 992) columnWidth = "50%";
 
                 return (
                     <StackGrid
                         columnWidth={columnWidth}
-                        gutterWidth={40}
-                        gutterHeight={40}
+                        gutterWidth={80}
+                        gutterHeight={80}
                     >
                         { children }
                     </StackGrid>

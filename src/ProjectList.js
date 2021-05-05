@@ -35,23 +35,6 @@ const projectsList = [
         `,
     },
     {
-        name: "Stock Predictor",
-        imgName: "img_stock.jpg",
-        links: [
-            {
-                url: "https://stock-decider.herokuapp.com/",
-                label: "Website"
-            },
-            {
-                url: "https://github.com/DHua5922/StockPredictionMW2-4",
-                label: "Code"
-            }
-        ],
-        description: `
-            In a Scrum team of 5, I built a stock predictor website that decides whether a stock is good or bad depending on the headlines. Throughout this internship, I added features, such as displaying stock quote from Finnhub API, for the website based on the tickets from Jira. I also improved code from pull requests and reported my progress in bi-weekly stand up meetings. The front-end was created with React, HTML, and CSS. The back-end was created with Node.js and Express. Stock data was retrieved from Finnhub's API.
-        `,
-    },
-    {
         name: "Chatterus",
         imgName: "img_chatterus.jpg",
         links: [
@@ -76,6 +59,10 @@ const projectsList = [
         name: "newsgen",
         imgName: "img_news.jpg",
         links: [
+            {
+                url: "https://newsgen.herokuapp.com/",
+                label: "Website"
+            },
             {
                 url: "https://github.com/DHua5922/newsgen-frontend",
                 label: "Front End Code",

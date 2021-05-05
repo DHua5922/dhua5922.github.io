@@ -8,7 +8,7 @@ import AnimatedGrid from '../components/views/AnimatedGrid';
 
 const Section = styled.section`
     background-color: lightgreen;
-    padding: 60px 10vw;
+    padding: 60px 20vw;
 `;
 
 const Header = styled.h1`
