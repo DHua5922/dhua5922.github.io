@@ -1,21 +1,24 @@
 import { Navbar as BNavbar, Nav } from 'react-bootstrap';
 import React from "react";
 import tw, { styled } from "twin.macro";
+import { useScrollSection } from 'react-scroll-section';
 
-const links = [
-    {
-        href: "#about",
-        label: "About"
-    },
-    {
-        href: "#portfolio",
-        label: "Portfolio"
-    },
-    {
-        href: "#contact",
-        label: "Contact"
-    },
-];
+function useLinks() {
+    return [
+        {
+            label: "About",
+            ...useScrollSection('about')
+        },
+        {
+            label: "Portfolio",
+            ...useScrollSection('portfolio')
+        },
+        {
+            label: "Contact",
+            ...useScrollSection('contact')
+        },
+    ];
+}
 
 const SNavbar = styled(BNavbar)`
     ${tw`bg-black`}
@@ -28,9 +31,9 @@ export default function Navbar() {
             <BNavbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto mr-auto">
                     {
-                        links.map(link => {
-                            const { href, label } = link;
-                            return <Nav.Link href={href}>{label}</Nav.Link>;
+                        useLinks().map(link => {
+                            const { label, ...rest } = link;
+                            return <Nav.Link {...rest}>{label}</Nav.Link>;
                         })
                     }
                 </Nav>

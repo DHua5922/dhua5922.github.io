@@ -3,10 +3,10 @@ import projectsList from '../ProjectList';
 import { Card } from 'react-bootstrap';
 import Project from '../components/views/Project';
 import tw, { styled } from "twin.macro";
-import ScrollBounce from '../components/views/ScrollBounce';
 import AnimatedGrid from '../components/views/AnimatedGrid';
+import Section from '../components/views/Section';
 
-const Section = styled.section`
+const Container = styled(Section)`
     background-color: lightgreen;
     padding: 60px 20vw;
 `;
@@ -16,6 +16,7 @@ const Header = styled.h1`
 `;
 
 const ProjectDisplay = styled(Card)`
+    box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     ${tw`w-full h-full cursor-pointer`}
 `;
 
@@ -24,34 +25,34 @@ const ProjectImage = styled(Card.Img)`
     ${tw`w-full`}
 `;
 
-export default function Portfolio() {
+export default function Portfolio({ ...props }) {
     const [clickedProject, setClickedProject] = useState(null);
 
     return (
-        <ScrollBounce>
-            <Section id="portfolio">
-                <Header>Portfolio</Header>
+        <Container {...props}>
+            <Header>Portfolio</Header>
 
-                <AnimatedGrid>
-                    {
-                        projectsList.map(project => (
-                            <ProjectDisplay onClick={() => setClickedProject(project)}>
-                                <ProjectImage src={`images/${project.imgName}`}/>      
-                                <Card.Body tw="text-center">   
-                                    <Card.Title tw="m-0">{project.name}</Card.Title>  
-                                </Card.Body>    
-                            </ProjectDisplay>
-                        ))
-                    }
-                </AnimatedGrid>
+            <AnimatedGrid>
+                {
+                    projectsList.map(project => (
+                        <ProjectDisplay onClick={() => setClickedProject(project)}>
+                            <ProjectImage src={`images/${project.imgName}`}/>      
+                            <Card.Body tw="text-center">   
+                                <Card.Title tw="m-0">{project.name}</Card.Title>  
+                            </Card.Body>    
+                        </ProjectDisplay>
+                    ))
+                }
+            </AnimatedGrid>
 
-                { clickedProject &&
+            { 
+                clickedProject &&
                     <Project 
                         toggleClickedProject={setClickedProject} 
                         show={true} 
-                        project={clickedProject} />
-                }
-            </Section>
-        </ScrollBounce>   
+                        project={clickedProject} 
+                    />
+            }
+        </Container>
     );   
 }
