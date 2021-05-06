@@ -7,18 +7,23 @@ import Navbar from './components/Navbar';
 import About from './sections/About';
 import Portfolio from './sections/Portfolio';
 import Contact from './sections/Contact';
+import { ScrollingProvider } from 'react-scroll-section';
 
-const routing = (
-    <main>
-        <Navbar />
-        <About />
-        <Portfolio />
-        <Contact />
-        <Footer />
-    </main>
-)
+function App() {
+    return (
+        <ScrollingProvider>
+            <Navbar />
+            <main>
+                <About id="about" />
+                <Portfolio id="portfolio" />
+                <Contact id="contact" />
+            </main>
+            <Footer />
+        </ScrollingProvider>
+    );
+}
 
-ReactDOM.render(routing, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

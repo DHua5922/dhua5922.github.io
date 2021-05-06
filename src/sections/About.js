@@ -1,9 +1,9 @@
 import React from 'react';
 import tw, { styled } from "twin.macro";
-import ScrollBounce from '../components/views/ScrollBounce';
+import Section from '../components/views/Section';
 
-const Section = styled.section`
-    padding: 45vh 10vw;
+const Container = styled(Section)`
+    padding: 40vh 10vw;
     ${tw`bg-white text-black text-center`}
 `;
 
@@ -15,13 +15,11 @@ const Description = styled.h1`
     ${tw`text-lg`}
 `;
 
-export default function About() {
+export default function About({ ...props }) {
     return (
-        <ScrollBounce>
-            <Section id="about">
-                    <Name>Dylan Hua</Name>
-                    <Description>Front End Developer</Description>
-            </Section>
-        </ScrollBounce>
+        <Container {...props}>
+            <Name>Dylan Hua</Name>
+            <Description>Front End Developer</Description>
+        </Container>
     ); 
 }
