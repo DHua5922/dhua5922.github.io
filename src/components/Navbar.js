@@ -4,6 +4,7 @@ import tw, { styled } from "twin.macro";
 import { useScrollSection } from 'react-scroll-section';
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
+import { linkedinUrl } from '../global';
 
 function useLinks() {
     return {
@@ -23,7 +24,7 @@ function useLinks() {
         ],
         right: [
             {
-                url: "https://www.linkedin.com/in/dylanhua/",
+                url: linkedinUrl,
                 icon: <FaLinkedin tw="text-white text-3xl" />,
             },
             {
