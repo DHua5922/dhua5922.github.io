@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -16,32 +16,42 @@ const ModalFooter = styled(Modal.Header)`
     ${tw`border-t-0 justify-center`}
 `;
 
-export default function Project({ show, project, toggleClickedProject }) {
+export default function Project({ project }) {
+    const { open, name, imgName, description, links } = project;
+    const [show, setShow] = useState(open);
+    
+    useEffect(() => setShow(open), [project]);
+
     return(
         <Modal
             show={show}
-            onHide={() => toggleClickedProject(false)}
+            onHide={() => setShow(false)}
             centered
         >
             <ModalHeader closeButton>
                 <Modal.Title>
-                    {project.name}<br></br>
+                    {name}<br />
                 </Modal.Title>
             </ModalHeader>
                 
             <ModalBody>
                 <Image 
                     tw="w-1/2 block mx-auto mb-5"
-                    src={`images/${project.imgName}`} />
-                <div>{project.description}</div>        
+                    src={`images/${imgName}`} />
+                <div>{description}</div>        
             </ModalBody>
 
             <ModalFooter>
                 { 
-                    project.links.map(link => {
+                    links.map((link, index) => {
                         const { url, label } = link;
                         return (
-                            <a href={url} rel="noopener noreferrer" target="_blank">
+                            <a 
+                                key={index}
+                                href={url} 
+                                rel="noopener noreferrer" 
+                                target="_blank"
+                            >
                                 <Button variant="primary" tw="m-1">{label}</Button>
                             </a>
                         );
