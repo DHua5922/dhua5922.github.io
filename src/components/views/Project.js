@@ -3,6 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import tw, { styled } from "twin.macro";
+import NewTabLink from './NewTabLink';
 
 const ModalHeader = styled(Modal.Header)`
     ${tw`border-b-0`}
@@ -20,7 +21,7 @@ export default function Project({ project }) {
     const { open, name, imgName, description, links } = project;
     const [show, setShow] = useState(open);
     
-    useEffect(() => setShow(open), [project]);
+    useEffect(() => setShow(open), [project, open]);
 
     return(
         <Modal
@@ -46,14 +47,12 @@ export default function Project({ project }) {
                     links.map((link, index) => {
                         const { url, label } = link;
                         return (
-                            <a 
+                            <NewTabLink 
                                 key={index}
                                 href={url} 
-                                rel="noopener noreferrer" 
-                                target="_blank"
                             >
                                 <Button variant="primary" tw="m-1">{label}</Button>
-                            </a>
+                            </NewTabLink>
                         );
                     }) 
                 }
