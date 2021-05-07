@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import "./index.scss";
-import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import About from './sections/About';
 import Portfolio from './sections/Portfolio';
@@ -18,7 +17,6 @@ function App() {
                 <Portfolio id="portfolio" />
                 <Contact id="contact" />
             </main>
-            <Footer />
         </ScrollingProvider>
     );
 }
