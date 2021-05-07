@@ -34,24 +34,26 @@ export default function Portfolio({ ...props }) {
 
             <AnimatedGrid>
                 {
-                    projectsList.map(project => (
-                        <ProjectDisplay onClick={() => setClickedProject(project)}>
-                            <ProjectImage src={`images/${project.imgName}`}/>      
-                            <Card.Body tw="text-center">   
-                                <Card.Title tw="m-0">{project.name}</Card.Title>  
-                            </Card.Body>    
-                        </ProjectDisplay>
-                    ))
+                    projectsList.map((project, index) => {
+                        const { imgName, name } = project;
+                        return (
+                            <ProjectDisplay 
+                                key={index}
+                                onClick={() => setClickedProject({ open: true, ...project})}
+                            >
+                                <ProjectImage src={`images/${imgName}`}/>      
+                                <Card.Body tw="text-center">   
+                                    <Card.Title tw="m-0">{name}</Card.Title>  
+                                </Card.Body>    
+                            </ProjectDisplay>
+                        );
+                    })
                 }
             </AnimatedGrid>
 
             { 
                 clickedProject &&
-                    <Project 
-                        toggleClickedProject={setClickedProject} 
-                        show={true} 
-                        project={clickedProject} 
-                    />
+                    <Project project={clickedProject} />
             }
         </Container>
     );   
