@@ -1,13 +1,13 @@
 import React from 'react';
 import tw, { styled } from "twin.macro";
+import Center from '../components/views/Center';
 import NewTabLink from '../components/views/NewTabLink';
 import Section from '../components/views/Section';
 import { linkedinUrl } from '../global';
 
 const Container = styled(Section)`
     background-color: #111134;
-    padding: 45vh 10vw;
-    ${tw`text-white`}
+    ${tw`text-white relative`}
 `;
 
 const Header = styled.h1`
@@ -22,10 +22,12 @@ const Description = styled.div`
 export default function Contact({ ...props }) {
     return(
         <Container {...props}>
-            <Header>Contact Me</Header>
-            <Description>
-                You can reach out to me on <NewTabLink href={linkedinUrl}>LinkedIn</NewTabLink> or email me at hua.dylan@gmail.com
-            </Description>
+            <Center>
+                <Header>Contact Me</Header>
+                <Description>
+                    You can reach out to me on <NewTabLink href={linkedinUrl}>LinkedIn</NewTabLink> or email me at hua.dylan@gmail.com
+                </Description>
+            </Center>
         </Container>
     );
 }
