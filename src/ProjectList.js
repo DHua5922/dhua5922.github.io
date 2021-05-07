@@ -7,14 +7,10 @@ const projectsList = [
             label: "Website"
         }],
         description: `
-            As a Junior Web Portal UI Developer, I worked with 2 developers to create a service catalog website that lets 
-            over 20,000 students at UT Dallas use the IT services offered by the Office of Information Technology.
+            With 2 developers, I created a service catalog website to help over 20,000 users request IT services offered by the Office of Information Technology.
 
-            For my part, I worked on the front-end using React.js, HTML, and CSS by displaying services from Cherwell REST API 
-            on the sidebar and arranging the website in a way that will make the services easy to find. This website was 
-            deployed to WordPress.
-
-            I also maintain this website by changing or adding necessary features to make the website more useful.
+            For my part, I utilized React, HTML, and CSS to display the services from Cherwell REST API on the sidebar 
+            in a way that will help the user find the desired service in under 1 minute.
         `,
     },
     {
@@ -31,7 +27,7 @@ const projectsList = [
             },
         ],
         description: `
-            This website was built with React to make it easier to search for movies to watch.
+            A website built with React to make it easier to search for movies to watch.
         `,
     },
     {
@@ -52,7 +48,7 @@ const projectsList = [
             },
         ],
         description: `
-            This website allows users to chat with each other. The website was built with MERN stack (MongoDB, Express, Node.js, and React).
+            A website built with MERN stack (MongoDB, Express, React, Node.js) to allow users to chat with each other.
         `
     },
     {
@@ -73,9 +69,9 @@ const projectsList = [
             },
         ],
         description: `
-            Website for marking favorite news. Project was managed using ClickUp's Agile features.
-            Front end was built with Next.js as React framework and styled with HTML, CSS, Tailwind, and Styled components.
-            Back end was built with Java, Spring Boot, and MySQL.
+            A website for marking favorite news. 
+            Front end was built with Next.js (React framework).
+            Back end was built with Java, Spring Boot, and MySQL database.
         `
     },
 ];
