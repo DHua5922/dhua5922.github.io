@@ -39,12 +39,8 @@ const projectsList = [
                 label: "Website"
             },
             {
-                url: "https://github.com/DHua5922/chatterus-frontend",
-                label: "Front End Code"
-            },
-            {
-                url: "https://github.com/DHua5922/chatterus-backend",
-                label: "Back End Code"
+                url: "https://github.com/DHua5922/chatterus",
+                label: "Code"
             },
         ],
         description: `
@@ -60,12 +56,8 @@ const projectsList = [
                 label: "Website"
             },
             {
-                url: "https://github.com/DHua5922/newsgen-frontend",
-                label: "Front End Code",
-            },
-            {
-                url: "https://github.com/DHua5922/newsgen-backend",
-                label: "Back End Code",
+                url: "https://github.com/DHua5922/newsgen",
+                label: "Code",
             },
         ],
         description: `
