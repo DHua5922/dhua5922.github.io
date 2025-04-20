@@ -1,15 +1,15 @@
-name: Build Vite App
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
@@ -20,16 +20,18 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build project
+      - name: Build Vite
         run: yarn build
 
-      - name: Add .nojekyll
-        run: echo > dist/.nojekyll
-
-      - name: Commit & Push dist folder
+      - name: Copy dist/ contents to root
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist -f
-          git commit -m "Build: update dist" || echo "No changes to commit"
+          cp -r dist/* .
+          echo > .nojekyll
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add . -f
+          git commit -m "Deploy: update root with latest build" || echo "No changes to commit"
           git push
