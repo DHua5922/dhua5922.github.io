@@ -2,7 +2,7 @@
 
 Portfolio website.
 
-## Dependencies / Technologies Used
+## Technologies
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
