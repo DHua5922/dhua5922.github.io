@@ -1,0 +1,333 @@
+:root {
+    --color-scheme: light;
+    --dark-color: #222a37;
+    --light-color: #F8FAFC;
+    --darker-color: #0B1120;
+    --project-overlay-color: rgba(11, 17, 32, 0.8);
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --background-image: url("../assets/dark-snow.gif");
+    
+    --modal-border-radius: 20px;
+    --popup-transition-duration: 0.5s;
+    --transition-duration: 0.3s;
+}
+
+[data-theme="dark"] {
+    --color-scheme: dark;
+    --dark-color: #F8FAFC ;
+    --light-color: #222a37;
+    --darker-color: #ddd5c8;
+    --project-overlay-color: rgba(248, 250, 252, 0.8);
+    --box-shadow: 0 4px 8px rgba(248, 250, 252, 0.6);
+    --background-image: url("../assets/light-snow.gif");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: var(--color-scheme);
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Closed state of the dialog   */
+dialog {
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleY(0);
+    transform-origin: center;
+    transition:
+        opacity var(--popup-transition-duration) ease-out,
+        transform var(--popup-transition-duration) ease-out,
+        overlay var(--popup-transition-duration) ease-out allow-discrete,
+        display var(--popup-transition-duration) ease-out allow-discrete;
+    border: none;
+    border-radius: var(--modal-border-radius);
+    z-index: 100;
+    background-color: var(--light-color);
+}
+/* Open state of the dialog  */
+dialog:open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleY(1);
+}
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+    background-color: transparent;
+    transition:
+        display var(--popup-transition-duration) allow-discrete,
+        overlay var(--popup-transition-duration) allow-discrete,
+        background-color var(--popup-transition-duration);
+}
+dialog:open::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+}
+
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect,
+    as the specificity is the same */
+@starting-style {
+    dialog:open {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(0);
+    }
+
+    dialog:open::backdrop {
+        background-color: transparent;
+    }
+}
+
+/* 
+
+*************
+** UTILITY **
+*************
+
+*/
+.required {
+    color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.btn {
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.btn-primary {
+    background-color: var(--dark-color);
+    border: none;
+    color: var(--light-color);
+}
+
+.btn:hover,
+.btn:focus,
+.scale-on-hover:hover,
+.scale-on-focus:focus {
+    transform: scale(1.25);
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.link {
+    color: var(--dark-color);
+    font-size: 1.25rem;
+    position: relative;
+}
+.link:focus {
+    outline: none;
+}
+.link::after {
+    background-color: var(--dark-color);
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    transition: width var(--transition-duration) ease-in-out;
+}
+.link:hover::after, .link:focus::after {
+    width: 100%;
+}
+
+.text-light {
+    color: var(--light-color);
+}
+.text-dark {
+    color: var(--dark-color);
+}
+
+/* 
+
+************
+** NAVBAR **
+************
+
+*/
+nav {
+    background-color: transparent;
+}
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: auto;
+}
+
+.nav__logo-container {
+    max-width: 4rem;
+    max-height: 4rem;
+
+}
+
+.nav__menu-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--dark-color);
+    border: none;
+}
+.nav__menu-btn:focus,.project-details__close-btn:focus {
+    outline: 1px solid var(--dark-color);
+}
+
+.nav__links--expandable {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-duration) ease-out;
+    visibility: hidden;
+}
+.nav__links--expandable.expanded {
+    grid-template-rows: 1fr;
+    visibility: visible;
+}
+.nav__links {
+    overflow: hidden;
+}
+.nav__links--default {
+    display: none;
+}
+.nav__links--expandable.expanded .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding-bottom: 24px;
+}
+
+
+/* 
+
+************
+** FOOTER **
+************
+
+*/
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    margin: auto;
+    max-width: 1200px;
+}
+.footer__logo-container {
+    max-width: 6rem;
+    max-height: 6rem;
+}
+
+.footer__links {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;   
+    text-align: center; 
+}
+
+.footer__divider {
+    background-color: var(--dark-color);
+    height: 1px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.footer__creator {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .nav__menu-btn {
+        display: none;
+    }
+
+    .nav__links--expandable {
+        display: none;
+    }
+
+    .nav__links--default {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .footer__links {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .footer__divider {
+        max-width: 500px;
+    }
+}
+
+
+
+/*
+
+*****************************
+** EMAIL AND THEME BUTTONS **
+*****************************
+
+*/
+.email-button,
+.theme-toggle {
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    color: var(--light-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 2vh;
+}
+
+.email-button {
+    right: 2vw;
+}
+
+.theme-toggle {
+    left: 2vw;
+}
+
+.email-button:focus,
+.theme-toggle:focus,
+.btn-primary:focus {
+    outline: 2px solid var(--dark-color);
+}
