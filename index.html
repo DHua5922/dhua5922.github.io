@@ -55,8 +55,14 @@
       aria-hidden="true"
       poster="assets/images/backgrounds/light-snow/poster.png"
     >
-      <source src="assets/videos/backgrounds/light-snow/background.webm" type="video/webm" />
-      <source src="assets/videos/backgrounds/light-snow/background.mp4" type="video/mp4" />
+      <source
+        src="assets/videos/backgrounds/light-snow/background.webm"
+        type="video/webm"
+      />
+      <source
+        src="assets/videos/backgrounds/light-snow/background.mp4"
+        type="video/mp4"
+      />
     </video>
     <video
       class="background-video background-video--dark"
@@ -67,8 +73,14 @@
       aria-hidden="true"
       poster="assets/images/backgrounds/dark-snow/poster.png"
     >
-      <source src="assets/videos/backgrounds/dark-snow/background.webm" type="video/webm" />
-      <source src="assets/videos/backgrounds/dark-snow/background.mp4" type="video/mp4" />
+      <source
+        src="assets/videos/backgrounds/dark-snow/background.webm"
+        type="video/webm"
+      />
+      <source
+        src="assets/videos/backgrounds/dark-snow/background.mp4"
+        type="video/mp4"
+      />
     </video>
 
     <!-- PROJECT DETAILS POPUP -->
@@ -169,7 +181,7 @@
         <!-- HERO -->
         <div class="hero__container">
           <!-- ABOUT -->
-          <header class="header__container">
+          <header class="header__container" id="hero-about">
             <h1 class="header__name">Dylan Hua</h1>
             <p class="header__role">Frontend Developer</p>
             <p class="header__about-description">
@@ -194,9 +206,29 @@
               </li>
             </ul>
 
-            <a href="#projects-section" class="header__button btn btn-primary"
-              >See Projects</a
-            >
+            <div class="header__buttons">
+              <a href="#projects-section" class="header__button btn btn-primary"
+                >See Projects</a
+              >
+
+              <a
+                class="header__social-link"
+                href="https://github.com/DHua5922"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Dylan Hua's GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+
+              <a
+                class="header__social-link"
+                href="https://www.linkedin.com/in/dylanhua/"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Dylan Hua's LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
           </header>
 
           <!-- CONTACT FORM -->
@@ -307,9 +339,23 @@
         </figure>
 
         <ul class="footer__links">
-          <li><a class="link footer__link" href="#about-section">About</a></li>
           <li>
-            <a class="link footer__link" href="#projects-section">Projects</a>
+            <a
+              class="link footer__link"
+              href="https://github.com/DHua5922"
+              rel="noopener noreferrer"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              class="link footer__link"
+              href="https://www.linkedin.com/in/dylanhua/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >LinkedIn</a
+            >
           </li>
           <li>
             <a class="link footer__link" href="#contact-form"> Contact </a>
@@ -318,7 +364,10 @@
 
         <div class="footer__divider"></div>
 
-        <p class="footer__creator">Made By Dylan Hua</p>
+        <p class="footer__creator">
+          Made By
+          <a href="#hero-about" class="link-underline">Dylan Hua</a>
+        </p>
       </div>
     </footer>
 

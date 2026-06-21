@@ -125,6 +125,19 @@ dialog:open::backdrop {
     }
 }
 
+.nav__menu-btn:focus,
+.project-details__close-btn:focus,
+.email-button:focus,
+.theme-toggle:focus,
+.btn-primary:focus,
+.btn:hover,
+.btn:focus,
+.scale-on-hover:hover,
+.scale-on-focus:focus {
+    outline: 1px solid var(--dark-color);
+    outline-offset: 4px;
+}
+
 /* 
 
 *************
@@ -159,8 +172,6 @@ dialog:open::backdrop {
 .scale-on-focus:focus {
     transform: scale(1.25);
     transition: transform var(--transition-duration) ease-in-out;
-    outline: 1px solid var(--dark-color);
-    outline-offset: 4px;
 }
 
 .link {
@@ -183,6 +194,14 @@ dialog:open::backdrop {
 }
 .link:hover::after, .link:focus::after {
     width: 100%;
+}
+
+.link-underline {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+.link-underline:focus {
+    outline: 1px solid var(--dark-color);
 }
 
 .text-light {
@@ -222,9 +241,6 @@ nav {
     background-color: transparent;
     color: var(--dark-color);
     border: none;
-}
-.nav__menu-btn:focus,.project-details__close-btn:focus {
-    outline: 1px solid var(--dark-color);
 }
 
 .nav__links--expandable {
@@ -343,10 +359,4 @@ nav {
 
 .theme-toggle {
     left: 2vw;
-}
-
-.email-button:focus,
-.theme-toggle:focus,
-.btn-primary:focus {
-    outline: 2px solid var(--dark-color);
 }
