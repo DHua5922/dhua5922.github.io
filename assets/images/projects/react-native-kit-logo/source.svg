@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-labelledby="title desc">
+  <title id="title">React Native Kit logo</title>
+  <desc id="desc">A mobile device with React-style orbit rings.</desc>
+  <rect x="118" y="54" width="148" height="276" rx="30" fill="#0f172a" stroke="#38bdf8" stroke-width="12"/>
+  <rect x="146" y="82" width="92" height="206" rx="10" fill="#172554"/>
+  <circle cx="192" cy="306" r="9" fill="#67e8f9"/>
+  <ellipse cx="192" cy="184" rx="116" ry="42" fill="none" stroke="#67e8f9" stroke-width="12"/>
+  <ellipse cx="192" cy="184" rx="116" ry="42" fill="none" stroke="#67e8f9" stroke-width="12" transform="rotate(60 192 184)"/>
+  <ellipse cx="192" cy="184" rx="116" ry="42" fill="none" stroke="#67e8f9" stroke-width="12" transform="rotate(120 192 184)"/>
+  <circle cx="192" cy="184" r="20" fill="#facc15"/>
+  <circle cx="192" cy="184" r="9" fill="#0f172a"/>
+</svg>

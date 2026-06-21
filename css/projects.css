@@ -53,8 +53,13 @@
     max-width: 200px;
     margin: 2rem auto;
     max-height: 200px;
-    height: 100%;
     width: 100%;
+}
+.project__image,
+.project-details__image {
+    display: block;
+    height: auto;
+    object-fit: contain;
 }
 .project__name {
     font-size: 1.5rem;
@@ -63,6 +68,8 @@
     padding: 0.5rem;
     text-align: center;
     background-color: var(--light-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #project-details__popup {
