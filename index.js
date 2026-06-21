@@ -5,13 +5,71 @@ const projects = [
       "iBrew is a responsive brewery discovery website built with HTML, CSS, and vanilla JavaScript. Users can search for breweries, sort results, view brewery details, open mapped locations, and generate a random brewery recommendation.",
     liveLink: "https://www.huadylan.com/iBrew",
     codeLink: "https://github.com/DHua5922/iBrew",
-    imageLink: "./assets/iBrew-logo-400.png",
+    imageLink: "./assets/images/projects/ibrew-logo/original.png",
     imageSrcSet:
-      "./assets/iBrew-logo-200.png 200w, ./assets/iBrew-logo-400.png 400w",
+      "./assets/images/projects/ibrew-logo/192.png 192w, ./assets/images/projects/ibrew-logo/384.png 384w",
     imageAvifSrcSet:
-      "./assets/iBrew-logo-200.avif 200w, ./assets/iBrew-logo-400.avif 400w",
-    imageSizes: "200px",
-    imageBackgroundStyle: `background: #66443d; background: linear-gradient(146deg,rgba(102, 68, 61, 1) 0%, rgba(130, 81, 70, 1) 41%, rgba(216, 138, 31, 1) 100%)`,
+      "./assets/images/projects/ibrew-logo/192.avif 192w, ./assets/images/projects/ibrew-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/ibrew-logo/192.webp 192w, ./assets/images/projects/ibrew-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 177,
+    imageBackgroundStyle: `background: #3f220f; background: linear-gradient(146deg,rgba(63, 34, 15, 1) 0%, rgba(126, 65, 20, 1) 40%, rgba(225, 132, 24, 1) 72%, rgba(90, 126, 22, 1) 100%)`,
+  },
+  {
+    name: "React Kit",
+    description:
+      "React Kit is a collection of reusable React components and hooks designed to streamline the development of modern web applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
+    liveLink: "https://www.huadylan.com/react-kit",
+    codeLink: "https://github.com/DHua5922/react-kit",
+    imageLink: "./assets/images/projects/react-kit-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/react-kit-logo/192.png 192w, ./assets/images/projects/react-kit-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/react-kit-logo/192.avif 192w, ./assets/images/projects/react-kit-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/react-kit-logo/192.webp 192w, ./assets/images/projects/react-kit-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 192,
+    imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(14, 116, 144, 1) 52%, rgba(34, 211, 238, 1) 100%)`,
+  },
+  {
+    name: "React Native Kit",
+    description:
+      "React Native Kit is a collection of reusable React Native components and hooks designed to streamline the development of mobile applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
+    liveLink: "https://www.huadylan.com/react-native-kit",
+    codeLink: "https://github.com/DHua5922/react-native-kit",
+    imageLink: "./assets/images/projects/react-native-kit-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.png 192w, ./assets/images/projects/react-native-kit-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.avif 192w, ./assets/images/projects/react-native-kit-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.webp 192w, ./assets/images/projects/react-native-kit-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 192,
+    imageBackgroundStyle: `background: #111827; background: linear-gradient(146deg,rgba(17, 24, 39, 1) 0%, rgba(67, 56, 202, 1) 52%, rgba(6, 182, 212, 1) 100%)`,
+  },
+  {
+    name: "JS TS Kit",
+    description:
+      "JS TS Kit is a collection of reusable functions and classes that can be used in frontend and backend to streamline development and improve code maintainability.",
+    liveLink: "https://www.huadylan.com/js-ts-kit",
+    codeLink: "https://github.com/DHua5922/js-ts-kit",
+    imageLink: "./assets/images/projects/js-ts-kit-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/js-ts-kit-logo/192.png 192w, ./assets/images/projects/js-ts-kit-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/js-ts-kit-logo/192.avif 192w, ./assets/images/projects/js-ts-kit-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/js-ts-kit-logo/192.webp 192w, ./assets/images/projects/js-ts-kit-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 192,
+    imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(37, 99, 235, 1) 52%, rgba(250, 204, 21, 1) 100%)`,
   },
 ];
 
@@ -64,17 +122,30 @@ function renderProjects() {
         <div class="project__content--overlay">Click To See Details</div>
             <figure class="project__image--container">
               <picture>
-                <source
-                  type="image/avif"
-                  srcset="${project.imageAvifSrcSet}"
-                  sizes="${project.imageSizes}"
-                >
+                ${
+                  project.imageAvifSrcSet
+                    ? `<source
+                        type="image/avif"
+                        srcset="${project.imageAvifSrcSet}"
+                        sizes="${project.imageSizes}"
+                      >`
+                    : ""
+                }
+                ${
+                  project.imageWebpSrcSet
+                    ? `<source
+                        type="image/webp"
+                        srcset="${project.imageWebpSrcSet}"
+                        sizes="${project.imageSizes}"
+                      >`
+                    : ""
+                }
                 <img
                   src="${project.imageLink}"
                   srcset="${project.imageSrcSet}"
                   sizes="${project.imageSizes}"
-                  width="200"
-                  height="184"
+                  width="${project.imageWidth}"
+                  height="${project.imageHeight}"
                   loading="lazy"
                   decoding="async"
                   alt="${project.name} logo"
@@ -100,6 +171,12 @@ function renderProjectDetails(project) {
   const projectImageElem = projectDetailsDialogElem.querySelector(
     ".project-details__image",
   );
+  const projectAvifSourceElem = projectDetailsDialogElem.querySelector(
+    ".project-details__source--avif",
+  );
+  const projectWebpSourceElem = projectDetailsDialogElem.querySelector(
+    ".project-details__source--webp",
+  );
   const projectDescriptionElem = projectDetailsDialogElem.querySelector(
     ".project-details__description",
   );
@@ -111,11 +188,15 @@ function renderProjectDetails(project) {
   );
 
   projectNameElem.textContent = project.name;
+  projectAvifSourceElem.srcset = project.imageAvifSrcSet;
+  projectAvifSourceElem.sizes = project.imageSizes;
+  projectWebpSourceElem.srcset = project.imageWebpSrcSet;
+  projectWebpSourceElem.sizes = project.imageSizes;
   projectImageElem.src = project.imageLink;
   projectImageElem.srcset = project.imageSrcSet;
   projectImageElem.sizes = project.imageSizes;
-  projectImageElem.width = 200;
-  projectImageElem.height = 184;
+  projectImageElem.width = project.imageWidth;
+  projectImageElem.height = project.imageHeight;
   projectDescriptionElem.textContent = project.description;
   projectLiveLinkElem.href = project.liveLink;
   projectCodeLinkElem.href = project.codeLink;
