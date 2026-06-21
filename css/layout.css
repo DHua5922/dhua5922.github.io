@@ -159,6 +159,8 @@ dialog:open::backdrop {
 .scale-on-focus:focus {
     transform: scale(1.25);
     transition: transform var(--transition-duration) ease-in-out;
+    outline: 1px solid var(--dark-color);
+    outline-offset: 4px;
 }
 
 .link {
