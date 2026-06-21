@@ -65,10 +65,26 @@
     font-size: 1.25rem;
     font-weight: 500;
 }
-.header__button {
+
+.header__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 1rem;
-    width: fit-content;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+.header__social-link {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: var(--dark-color);
+}
+.header__social-link:hover,
+.header__social-link:focus {
+    outline: 2px solid var(--dark-color);
+    outline-offset: 4px;
 }
 
 .header__name, .header__role, .header__about-description {
@@ -182,6 +198,12 @@
     outline: 1px solid var(--light-color);
 }
 
+@media (min-width: 576px) {
+    .header__buttons {
+        flex-direction: row;
+    }
+}
+
 @media (min-width: 768px) {
     .hero__container  {
         flex-direction: row !important;
@@ -209,8 +231,8 @@
         gap: 3rem;
     }
 
-    .header__button {
-        align-self: flex-start;
+    .header__buttons {
+        justify-content: flex-start;
     }
 
     #contact-form {
