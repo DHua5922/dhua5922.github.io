@@ -73,6 +73,9 @@ const projects = [
   },
 ];
 
+const themeLocalStorageKey = "theme";
+const themeDataAttribute = "data-theme";
+
 const projectsContainerElem = document.querySelector(".projects");
 const projectDetailsDialogElem = document.querySelector(
   "#project-details__popup",
@@ -98,13 +101,13 @@ window.onload = () => {
       projectDetailsDialogElem.close();
     });
 
-  document.querySelector(".theme-toggle").addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", newTheme);
-  });
+  document
+    .querySelector(".theme-toggle")
+    .addEventListener("click", toggleTheme);
 
   contactFormElem.addEventListener("submit", contact);
+
+  loadTheme();
 };
 
 function renderProjects() {
@@ -286,4 +289,21 @@ async function contact(event) {
 function resetContactButton() {
   contactSubmitBtnElem.disabled = false;
   contactSubmitBtnElem.innerHTML = "Send Message";
+}
+
+function toggleTheme() {
+  const newTheme = loadTheme() === "dark" ? "light" : "dark";
+
+  localStorage.setItem(themeLocalStorageKey, newTheme);
+  loadTheme();
+}
+
+function loadTheme() {
+  const savedTheme = localStorage.getItem(themeLocalStorageKey);
+
+  if (savedTheme) {
+    document.documentElement.setAttribute(themeDataAttribute, savedTheme);
+  }
+
+  return savedTheme;
 }

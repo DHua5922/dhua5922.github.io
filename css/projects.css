@@ -109,7 +109,6 @@
 }
 .project-details__link:focus,
 .project-details__link:hover {
-    outline: 3px solid var(--dark-color);
     transition: outline var(--transition-duration) ease-in-out;
     transform: none;
 }
