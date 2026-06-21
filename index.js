@@ -34,12 +34,6 @@ window.onload = () => {
 
   renderProjects();
 
-  projectsContainerElem.addEventListener("click", (event) => {
-    const projectButton = event.target.closest(".project__content");
-    renderProjectDetails(projects[projectButton.dataset.projectIndex]);
-    projectDetailsDialogElem.showModal();
-  });
-
   projectDetailsDialogElem
     .querySelector(".project-details__close-btn")
     .addEventListener("click", () => {
@@ -160,15 +154,27 @@ async function contact(event) {
   if (!nameValue) {
     nameErrorMsgElem.classList.add("show");
     nameInputElem.ariaInvalid = "true";
+  } else {
+    nameErrorMsgElem.classList.remove("show");
+    nameInputElem.ariaInvalid = "false";
   }
+
   if (!emailValue) {
     emailErrorMsgElem.classList.add("show");
     emailInputElem.ariaInvalid = "true";
+  } else {
+    emailErrorMsgElem.classList.remove("show");
+    emailInputElem.ariaInvalid = "false";
   }
+
   if (!messageValue) {
     messageErrorMsgElem.classList.add("show");
     messageInputElem.ariaInvalid = "true";
+  } else {
+    messageErrorMsgElem.classList.remove("show");
+    messageInputElem.ariaInvalid = "false";
   }
+
   if (!nameValue || !emailValue || !messageValue) {
     resetContactButton();
     return;
