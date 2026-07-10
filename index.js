@@ -1,5 +1,23 @@
 const projects = [
   {
+    name: "Movie Finder",
+    description:
+      "A responsive movie discovery app built with HTML, CSS, and JavaScript. The app uses the TMDB API to display trending movies, search by title, view movie details, watch trailers, and manage a simple local cart flow.",
+    liveLink: "https://www.huadylan.com/movie-finder/",
+    codeLink: "https://github.com/DHua5922/movie-finder",
+    imageLink: "./assets/images/projects/movie-finder-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/movie-finder-logo/192.png 192w, ./assets/images/projects/movie-finder-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/movie-finder-logo/192.avif 192w, ./assets/images/projects/movie-finder-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/movie-finder-logo/192.webp 192w, ./assets/images/projects/movie-finder-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 177,
+    imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(30, 58, 138, 1) 52%, rgba(14, 165, 233, 1) 100%)`,
+  },
+  {
     name: "iBrew",
     description:
       "iBrew is a responsive brewery discovery website built with HTML, CSS, and vanilla JavaScript. Users can search for breweries, sort results, view brewery details, open mapped locations, and generate a random brewery recommendation.",
