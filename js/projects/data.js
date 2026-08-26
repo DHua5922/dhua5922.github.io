@@ -37,24 +37,6 @@ const projects = [
     imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(14, 116, 144, 1) 52%, rgba(34, 211, 238, 1) 100%)`,
   },
   {
-    name: "React Kit",
-    description:
-      "React Kit is a collection of reusable React components and hooks designed to streamline the development of modern web applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
-    liveLink: "https://www.huadylan.com/react-kit",
-    codeLink: "https://github.com/DHua5922/react-kit",
-    imageLink: "./assets/images/projects/react-kit-logo/original.png",
-    imageSrcSet:
-      "./assets/images/projects/react-kit-logo/192.png 192w, ./assets/images/projects/react-kit-logo/384.png 384w",
-    imageAvifSrcSet:
-      "./assets/images/projects/react-kit-logo/192.avif 192w, ./assets/images/projects/react-kit-logo/384.avif 384w",
-    imageWebpSrcSet:
-      "./assets/images/projects/react-kit-logo/192.webp 192w, ./assets/images/projects/react-kit-logo/384.webp 384w",
-    imageSizes: "192px",
-    imageWidth: 192,
-    imageHeight: 192,
-    imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(14, 116, 144, 1) 52%, rgba(34, 211, 238, 1) 100%)`,
-  },
-  {
     name: "Auth API",
     description:
       "Auth API is an API used by consumer apps, such as finance tracker, for user authentication and authorization. The users that the API manages are handled by SSO Users Admin Panel.",
@@ -73,6 +55,25 @@ const projects = [
     imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(14, 116, 144, 1) 52%, rgba(34, 211, 238, 1) 100%)`,
   },
   {
+    name: "React Kit",
+    description:
+      "React Kit is a collection of reusable React components and hooks designed to streamline the development of modern web applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
+    liveLink: "https://www.huadylan.com/react-kit",
+    codeLink: "https://github.com/DHua5922/react-kit",
+    imageLink: "./assets/images/projects/react-kit-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/react-kit-logo/192.png 192w, ./assets/images/projects/react-kit-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/react-kit-logo/192.avif 192w, ./assets/images/projects/react-kit-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/react-kit-logo/192.webp 192w, ./assets/images/projects/react-kit-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 192,
+    imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(14, 116, 144, 1) 52%, rgba(34, 211, 238, 1) 100%)`,
+  },
+
+  {
     name: "JS TS Kit",
     description:
       "JS TS Kit is a collection of reusable functions and classes that can be used in frontend and backend to streamline development and improve code maintainability.",
@@ -89,6 +90,24 @@ const projects = [
     imageWidth: 192,
     imageHeight: 192,
     imageBackgroundStyle: `background: #0f172a; background: linear-gradient(146deg,rgba(15, 23, 42, 1) 0%, rgba(37, 99, 235, 1) 52%, rgba(250, 204, 21, 1) 100%)`,
+  },
+  {
+    name: "React Native Kit",
+    description:
+      "React Native Kit is a collection of reusable React Native components and hooks designed to streamline the development of mobile applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
+    liveLink: "https://www.huadylan.com/react-native-kit",
+    codeLink: "https://github.com/DHua5922/react-native-kit",
+    imageLink: "./assets/images/projects/react-native-kit-logo/original.png",
+    imageSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.png 192w, ./assets/images/projects/react-native-kit-logo/384.png 384w",
+    imageAvifSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.avif 192w, ./assets/images/projects/react-native-kit-logo/384.avif 384w",
+    imageWebpSrcSet:
+      "./assets/images/projects/react-native-kit-logo/192.webp 192w, ./assets/images/projects/react-native-kit-logo/384.webp 384w",
+    imageSizes: "192px",
+    imageWidth: 192,
+    imageHeight: 192,
+    imageBackgroundStyle: `background: #111827; background: linear-gradient(146deg,rgba(17, 24, 39, 1) 0%, rgba(67, 56, 202, 1) 52%, rgba(6, 182, 212, 1) 100%)`,
   },
   {
     name: "Movie Finder",
@@ -125,23 +144,5 @@ const projects = [
     imageWidth: 192,
     imageHeight: 177,
     imageBackgroundStyle: `background: #3f220f; background: linear-gradient(146deg,rgba(63, 34, 15, 1) 0%, rgba(126, 65, 20, 1) 40%, rgba(225, 132, 24, 1) 72%, rgba(90, 126, 22, 1) 100%)`,
-  },
-  {
-    name: "React Native Kit",
-    description:
-      "React Native Kit is a collection of reusable React Native components and hooks designed to streamline the development of mobile applications. It provides a set of pre-built UI elements and utilities to enhance productivity and maintainability.",
-    liveLink: "https://www.huadylan.com/react-native-kit",
-    codeLink: "https://github.com/DHua5922/react-native-kit",
-    imageLink: "./assets/images/projects/react-native-kit-logo/original.png",
-    imageSrcSet:
-      "./assets/images/projects/react-native-kit-logo/192.png 192w, ./assets/images/projects/react-native-kit-logo/384.png 384w",
-    imageAvifSrcSet:
-      "./assets/images/projects/react-native-kit-logo/192.avif 192w, ./assets/images/projects/react-native-kit-logo/384.avif 384w",
-    imageWebpSrcSet:
-      "./assets/images/projects/react-native-kit-logo/192.webp 192w, ./assets/images/projects/react-native-kit-logo/384.webp 384w",
-    imageSizes: "192px",
-    imageWidth: 192,
-    imageHeight: 192,
-    imageBackgroundStyle: `background: #111827; background: linear-gradient(146deg,rgba(17, 24, 39, 1) 0%, rgba(67, 56, 202, 1) 52%, rgba(6, 182, 212, 1) 100%)`,
   },
 ];
