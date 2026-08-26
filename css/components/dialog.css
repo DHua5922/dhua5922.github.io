@@ -14,7 +14,7 @@ dialog {
     border: none;
     border-radius: var(--modal-border-radius);
     z-index: 100;
-    background-color: var(--light-color);
+    background-color: var(--color-surface);
 }
 
 /* Open state of the dialog  */

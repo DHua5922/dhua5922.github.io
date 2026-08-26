@@ -46,22 +46,22 @@
 
 .header__social-link {
     font-size: 1.5rem;
-    color: var(--light-color);
+    color: var(--color-on-strong);
     border-radius: 50%;
     padding: 0.5rem;
-    background-color: var(--dark-color);
+    background-color: var(--color-strong-surface);
 }
 
 .header__social-link:hover,
 .header__social-link:focus {
-    outline: 2px solid var(--dark-color);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 4px;
 }
 
 .header__name,
 .header__role,
 .header__about-description {
-    color: var(--dark-color);
+    color: var(--color-text);
 }
 
 @media (min-width: 576px) {

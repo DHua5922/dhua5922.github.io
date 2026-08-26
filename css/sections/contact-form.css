@@ -1,6 +1,6 @@
 #contact-form {
     border-radius: var(--modal-border-radius);
-    background-color: var(--dark-color);
+    background-color: var(--color-strong-surface);
     box-shadow: var(--box-shadow);
     padding: 2rem;
 }
@@ -26,11 +26,15 @@
     resize: vertical;
 }
 
-.contact-form__btn--close:focus,
 #contact-form input:focus,
-#contact-form textarea:focus,
-#contact-form button:focus {
-    outline: 1px solid var(--light-color);
+#contact-form textarea:focus {
+    outline: 1px solid var(--color-on-strong);
+}
+
+#contact-form button:hover,
+#contact-form button:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-on-strong);
+    outline-offset: 4px;
 }
 
 #contact-form .input-group .input-error-message {
@@ -46,13 +50,13 @@
 #contact-form label,
 #contact-form input,
 #contact-form textarea {
-    color: var(--light-color);
+    color: var(--color-on-strong);
 }
 
 #contact-form input,
 #contact-form textarea,
 #contact-form button[type="submit"] {
-    background-color: var(--darker-color);
+    background-color: var(--color-form-field);
 }
 
 .contact-form__success-message,
@@ -91,13 +95,15 @@
 }
 
 .contact-form__email-link {
-    color: var(--light-color);
+    color: var(--color-on-strong);
     text-decoration: underline;
 }
 
 .contact-form__email-link:hover,
-.contact-form__email-link:focus {
-    outline: 1px solid var(--light-color);
+.contact-form__email-link:focus-visible {
+    border-radius: 2px;
+    outline: var(--focus-ring-width) solid var(--color-on-strong);
+    outline-offset: 4px;
 }
 
 @media (min-width: 768px) {

@@ -15,21 +15,13 @@
 }
 
 .btn-primary {
-    background-color: var(--dark-color);
+    background-color: var(--color-strong-surface);
     border: none;
-    color: var(--light-color);
-}
-
-.btn:hover,
-.btn:focus,
-.scale-on-hover:hover,
-.scale-on-focus:focus {
-    transform: scale(1.25);
-    transition: transform var(--transition-duration) ease-in-out;
+    color: var(--color-on-strong);
 }
 
 .link {
-    color: var(--dark-color);
+    color: var(--color-text);
     font-size: 1.25rem;
     position: relative;
 }
@@ -39,7 +31,7 @@
 }
 
 .link::after {
-    background-color: var(--dark-color);
+    background-color: var(--color-text);
     position: absolute;
     content: "";
     height: 2px;
@@ -55,31 +47,26 @@
 }
 
 .link-underline {
-    color: var(--dark-color);
+    color: var(--color-text);
     text-decoration: underline;
 }
 
-.link-underline:focus {
-    outline: 1px solid var(--dark-color);
+.link-underline:focus-visible {
+    border-radius: 2px;
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
+    outline-offset: 4px;
 }
 
 .text-light {
-    color: var(--light-color);
+    color: var(--color-on-strong);
 }
 
 .text-dark {
-    color: var(--dark-color);
+    color: var(--color-text);
 }
 
-.nav__menu-btn:focus,
-.project-details__close-btn:focus,
-.email-button:focus,
-.theme-toggle:focus,
-.btn-primary:focus,
 .btn:hover,
-.btn:focus,
-.scale-on-hover:hover,
-.scale-on-focus:focus {
-    outline: 1px solid var(--dark-color);
+.btn:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
     outline-offset: 4px;
 }

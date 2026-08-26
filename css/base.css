@@ -1,9 +1,13 @@
 :root {
     --color-scheme: light;
-    --dark-color: #222a37;
-    --light-color: #F8FAFC;
-    --darker-color: #0B1120;
-    --project-overlay-color: rgba(11, 17, 32, 0.8);
+    --color-text: #222a37;
+    --color-surface: #F8FAFC;
+    --color-strong-surface: #222a37;
+    --color-on-strong: #F8FAFC;
+    --color-form-field: #0B1120;
+    --color-project-overlay: rgba(11, 17, 32, 0.8);
+    --color-focus-ring: #222a37;
+    --focus-ring-width: 3px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     
     --modal-border-radius: 20px;
@@ -13,10 +17,13 @@
 
 [data-theme="dark"] {
     --color-scheme: dark;
-    --dark-color: #F8FAFC ;
-    --light-color: #222a37;
-    --darker-color: #ddd5c8;
-    --project-overlay-color: rgba(248, 250, 252, 0.8);
+    --color-text: #F8FAFC;
+    --color-surface: #222a37;
+    --color-strong-surface: #F8FAFC;
+    --color-on-strong: #222a37;
+    --color-form-field: #ddd5c8;
+    --color-project-overlay: rgba(248, 250, 252, 0.8);
+    --color-focus-ring: #F8FAFC;
     --box-shadow: 0 4px 8px rgba(248, 250, 252, 0.6);
 }
 
@@ -30,7 +37,7 @@
 html {
     scroll-behavior: smooth;
     color-scheme: var(--color-scheme);
-    background-color: var(--light-color);
+    background-color: var(--color-surface);
 }
 
 a {

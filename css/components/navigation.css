@@ -20,8 +20,14 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     background-color: transparent;
-    color: var(--dark-color);
+    color: var(--color-text);
     border: none;
+}
+
+.nav__menu-btn:hover,
+.nav__menu-btn:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
+    outline-offset: 4px;
 }
 
 .nav__links--expandable {
