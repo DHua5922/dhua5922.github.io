@@ -1,0 +1,19 @@
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background-color: var(--color-strong-surface);
+    color: var(--color-on-strong);
+    font-weight: 600;
+    transform: translateY(calc(-100% - 2rem));
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.skip-link:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
+    outline-offset: 4px;
+    transform: translateY(0);
+}
