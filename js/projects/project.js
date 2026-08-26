@@ -99,11 +99,8 @@ function renderProjectDetails(project) {
   const projectDescriptionElem = projectDetailsDialogElem.querySelector(
     ".project-details__description",
   );
-  const projectLiveLinkElem = projectDetailsDialogElem.querySelector(
-    ".project-details__link--live-site",
-  );
-  const projectCodeLinkElem = projectDetailsDialogElem.querySelector(
-    ".project-details__link--code",
+  const projectLinksElem = projectDetailsDialogElem.querySelector(
+    ".project-details__links",
   );
 
   projectNameElem.textContent = project.name;
@@ -118,6 +115,28 @@ function renderProjectDetails(project) {
   projectImageElem.height = project.imageHeight;
   projectImageElem.alt = `${project.name} logo`;
   projectDescriptionElem.textContent = project.description;
-  projectLiveLinkElem.href = project.liveLink;
-  projectCodeLinkElem.href = project.codeLink;
+  renderProjectLinks(projectLinksElem, project);
+}
+
+function renderProjectLinks(containerElem, project) {
+  const links = [
+    { label: project.liveLinkLabel, url: project.liveLink },
+    { label: "View Source Code", url: project.codeLink },
+    { label: "View Frontend Source Code", url: project.frontendCodeLink },
+    { label: "View Backend Source Code", url: project.backendCodeLink },
+  ];
+
+  containerElem.replaceChildren(
+    ...links
+      .filter(({ label, url }) => label && url)
+      .map(({ label, url }) => {
+        const linkElem = document.createElement("a");
+        linkElem.href = url;
+        linkElem.target = "_blank";
+        linkElem.rel = "noopener noreferrer";
+        linkElem.classList.add("btn", "btn-primary", "project-details__link");
+        linkElem.textContent = label;
+        return linkElem;
+      }),
+  );
 }
