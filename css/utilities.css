@@ -1,0 +1,85 @@
+.required {
+    color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.btn {
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+    background-color: var(--dark-color);
+    border: none;
+    color: var(--light-color);
+}
+
+.btn:hover,
+.btn:focus,
+.scale-on-hover:hover,
+.scale-on-focus:focus {
+    transform: scale(1.25);
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+.link {
+    color: var(--dark-color);
+    font-size: 1.25rem;
+    position: relative;
+}
+
+.link:focus {
+    outline: none;
+}
+
+.link::after {
+    background-color: var(--dark-color);
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    transition: width var(--transition-duration) ease-in-out;
+}
+
+.link:hover::after,
+.link:focus::after {
+    width: 100%;
+}
+
+.link-underline {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+.link-underline:focus {
+    outline: 1px solid var(--dark-color);
+}
+
+.text-light {
+    color: var(--light-color);
+}
+
+.text-dark {
+    color: var(--dark-color);
+}
+
+.nav__menu-btn:focus,
+.project-details__close-btn:focus,
+.email-button:focus,
+.theme-toggle:focus,
+.btn-primary:focus,
+.btn:hover,
+.btn:focus,
+.scale-on-hover:hover,
+.scale-on-focus:focus {
+    outline: 1px solid var(--dark-color);
+    outline-offset: 4px;
+}

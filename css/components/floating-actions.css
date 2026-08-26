@@ -1,0 +1,19 @@
+.email-button,
+.theme-toggle {
+    position: fixed;
+    bottom: 2vh;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.email-button {
+    right: 2vw;
+}
+
+.theme-toggle {
+    left: 2vw;
+}

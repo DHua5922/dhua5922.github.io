@@ -1,0 +1,51 @@
+/* Closed state of the dialog   */
+dialog {
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleY(0);
+    transform-origin: center;
+    transition:
+        opacity var(--popup-transition-duration) ease-out,
+        transform var(--popup-transition-duration) ease-out,
+        overlay var(--popup-transition-duration) ease-out allow-discrete,
+        display var(--popup-transition-duration) ease-out allow-discrete;
+    border: none;
+    border-radius: var(--modal-border-radius);
+    z-index: 100;
+    background-color: var(--light-color);
+}
+
+/* Open state of the dialog  */
+dialog:open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+    background-color: transparent;
+    transition:
+        display var(--popup-transition-duration) allow-discrete,
+        overlay var(--popup-transition-duration) allow-discrete,
+        background-color var(--popup-transition-duration);
+}
+
+dialog:open::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+}
+
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect,
+    as the specificity is the same */
+@starting-style {
+    dialog:open {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(0);
+    }
+
+    dialog:open::backdrop {
+        background-color: transparent;
+    }
+}
