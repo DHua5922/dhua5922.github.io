@@ -1,0 +1,62 @@
+:root {
+    --color-scheme: light;
+    --color-text: #222a37;
+    --color-surface: #F8FAFC;
+    --color-strong-surface: #222a37;
+    --color-on-strong: #F8FAFC;
+    --color-form-field: #0B1120;
+    --color-project-overlay: rgba(11, 17, 32, 0.8);
+    --color-focus-ring: #222a37;
+    --focus-ring-width: 3px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    
+    --modal-border-radius: 20px;
+    --popup-transition-duration: 0.5s;
+    --transition-duration: 0.3s;
+}
+
+[data-theme="dark"] {
+    --color-scheme: dark;
+    --color-text: #F8FAFC;
+    --color-surface: #222a37;
+    --color-strong-surface: #F8FAFC;
+    --color-on-strong: #222a37;
+    --color-form-field: #ddd5c8;
+    --color-project-overlay: rgba(248, 250, 252, 0.8);
+    --color-focus-ring: #F8FAFC;
+    --box-shadow: 0 4px 8px rgba(248, 250, 252, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: var(--color-scheme);
+    background-color: var(--color-surface);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.email-button,
+.theme-toggle {
+    position: fixed;
+    bottom: 2vh;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-strong-surface);
+    color: var(--color-on-strong);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.email-button:hover,
+.email-button:focus-visible,
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
+    outline-offset: 4px;
+}
+
+.email-button {
+    right: 2vw;
+}
+
+.theme-toggle {
+    left: 2vw;
+}
