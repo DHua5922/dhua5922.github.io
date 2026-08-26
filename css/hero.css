@@ -41,36 +41,10 @@
     line-height: 1.4;
 }
 
-.header__tech-stack {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.header__tech {
-    text-align: center;
-}
-
-.header__tech-icon {
-    font-size: 2rem;
-    color: var(--dark-color);
-    margin-bottom: 8px;
-}
-
-.header__tech-label {
-    text-align: center;
-    color: var(--dark-color);
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
 .header__buttons {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 1rem;
     align-items: center;
     justify-content: center;
 }
@@ -224,11 +198,6 @@
     }
     .header__name, .header__role, .header__about-description {
         text-align: left;
-    }
-
-    .header__tech-stack {
-        justify-content: flex-start;
-        gap: 3rem;
     }
 
     .header__buttons {
